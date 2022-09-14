@@ -1,0 +1,23 @@
+
+#include "TXLib.h"
+
+int main()
+    {
+    txCreateWindow (1200, 800);
+
+     txDisableAutoPause();
+
+     txTextCursor (false);
+     while(!GetAsyncKeyState(VK_ESCAPE))
+     {
+      txSetColor (TX_WHITE);
+      txSetFillColor (TX_WHITE);
+
+      txRectangle (10, 10, 110, 110);
+      Win::RoundRest (txDC())
+
+     }
+
+    return 0;
+    }
+
