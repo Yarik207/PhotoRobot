@@ -177,3 +177,929 @@ Run file:	D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe
 Directory:	D:\Мигалов\PhotoRobot
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005042FC (32-bit), Flags: CMdRE0, Thread: 0xA64 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004226F0 in D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0042C059 in D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/PhotoRobot/main.cpp (57):
+
+     55: 
+     56: 
+=>   57:         txTransparentBlt(txDC(), 100, 100, 100, 100, nose, 0, 0, TX_WHITE);
+     58: 
+     59:          txTransparentBlt(txDC(), 225, 225, 225, 225, Nooose, 0, 0, TX_WHITE);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in int main() at D:\Мигалов\PhotoRobot\main.cpp (57):
+
+     55: 
+     56: 
+=>   57:         txTransparentBlt(txDC(), 100, 100, 100, 100, nose, 0, 0, TX_WHITE);
+     58: 
+     59:          txTransparentBlt(txDC(), 225, 225, 225, 225, Nooose, 0, 0, TX_WHITE);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 16 2022 18:23:18, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 16 2022 18:23:35
+
+Run file:	D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\PhotoRobot
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005042FC (32-bit), Flags: CMdRE0, Thread: 0xC80 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004226F0 in D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0042C059 in D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/PhotoRobot/main.cpp (57):
+
+     55: 
+     56: 
+=>   57:         txTransparentBlt(txDC(), 100, 100, 100, 100, nose, 0, 0, TX_WHITE);
+     58: 
+     59:          txTransparentBlt(txDC(), 100, 100, 250, 100, Nooose, 0, 0, TX_WHITE);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in int main() at D:\Мигалов\PhotoRobot\main.cpp (57):
+
+     55: 
+     56: 
+=>   57:         txTransparentBlt(txDC(), 100, 100, 100, 100, nose, 0, 0, TX_WHITE);
+     58: 
+     59:          txTransparentBlt(txDC(), 100, 100, 250, 100, Nooose, 0, 0, TX_WHITE);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 16 2022 18:28:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 16 2022 18:28:26
+
+Run file:	D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\PhotoRobot
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13657, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Параметр "sourceImage" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005042FC (32-bit), Flags: CMdRE0, Thread: 0xE4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004226F0 in D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13657)
+
+# 1 0x0042C059 in D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/PhotoRobot/main.cpp (57):
+
+     55: 
+     56: 
+=>   57:         txTransparentBlt(txDC(), 100, 100, 100, 100, nose, 0, 0, TX_WHITE);
+     58: 
+     59:          txTransparentBlt(txDC(), 100, 100, 100, 100, Nooose, 0, 0, TX_WHITE);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13657):
+
+  13655: 
+  13656: $1  if (_TX_HDC_FAILED (destImage))   return false;
+=>13657: $   if (_TX_HDC_FAILED (sourceImage)) return false;
+  13658: 
+  13659:     // Это автоматическое определение размеров картинки (точнее, HDC источника - source) с помощью txGetExtent().
+
+# 1 in int main() at D:\Мигалов\PhotoRobot\main.cpp (57):
+
+     55: 
+     56: 
+=>   57:         txTransparentBlt(txDC(), 100, 100, 100, 100, nose, 0, 0, TX_WHITE);
+     58: 
+     59:          txTransparentBlt(txDC(), 100, 100, 100, 100, Nooose, 0, 0, TX_WHITE);
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 16 2022 18:28:46, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 16 2022 18:29:03
+
+Run file:	D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\PhotoRobot
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13678, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 100, 300} не полностью лежит внутри изображения-источника {0, 0, 100, 100}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005042FC (32-bit), Flags: CMdRE0, Thread: 0x18C4 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\codeblocks\codeblocks\mingw\include\txlib.h (13677) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004228EC in D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe: txTransparentBlt() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13678)
+
+# 1 0x0042C0E3 in D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/PhotoRobot/main.cpp (59):
+
+     57:         txTransparentBlt(txDC(), 100, 100, 100, 100, nose, 0, 0, TX_WHITE);
+     58: 
+=>   59:          txTransparentBlt(txDC(), 100, 100, 100, 300, Nooose, 0, 0, TX_WHITE);
+     60: 
+     61: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13677):
+
+  13675:         {
+  13676: $       SetLastError (ERROR_INVALID_DATA);
+=>13677: $       TX_ERROR ("Прямоугольник копируемой области {%g, %g, %g, %g} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13678:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13679:         }
+
+# 1 in int main() at D:\Мигалов\PhotoRobot\main.cpp (59):
+
+     57:         txTransparentBlt(txDC(), 100, 100, 100, 100, nose, 0, 0, TX_WHITE);
+     58: 
+=>   59:          txTransparentBlt(txDC(), 100, 100, 100, 300, Nooose, 0, 0, TX_WHITE);
+     60: 
+     61: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 16 2022 18:31:58, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 16 2022 18:32:14
+
+Run file:	D:\Мигалов\PhotoRobot\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\PhotoRobot
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x74A98438 в функции strchr(). Попытка прочесть данные по адресу 0x00000004 в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x6F4 (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x74A98438 in C:\Windows\System32\msvcrt.dll: strchr()
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6A9 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (71):
+
+     69:        for(int nk=0; nk<4; nk++)
+     70:        {
+=>   71:             drawButton(btn[nk]);
+     72:        }
+     73: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13432):
+
+  13430: $   RECT r = { ROUND (x0), ROUND (y0), ROUND (x1), ROUND (y1) };
+  13431: 
+=>13432: $   if (!strchr (text, '\n')) format |= DT_SINGLELINE;
+  13433: 
+  13434: $   unsigned prev = txSetTextAlign (TA_LEFT | TA_TOP | TA_NOUPDATECP, dc);
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:03:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:03:34
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x74A98438 в функции strchr(). Попытка прочесть данные по адресу 0x00000004 в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x6F4 (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x74A98438 in C:\Windows\System32\msvcrt.dll: strchr()
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6A9 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (71):
+
+     69:        for(int nk=0; nk<4; nk++)
+     70:        {
+=>   71:             drawButton(btn[nk]);
+     72:        }
+     73: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13432):
+
+  13430: $   RECT r = { ROUND (x0), ROUND (y0), ROUND (x1), ROUND (y1) };
+  13431: 
+=>13432: $   if (!strchr (text, '\n')) format |= DT_SINGLELINE;
+  13433: 
+  13434: $   unsigned prev = txSetTextAlign (TA_LEFT | TA_TOP | TA_NOUPDATECP, dc);
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:03:11, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:03:34
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x74A98418 в функции strchr(). Попытка прочесть данные по адресу 0x38EB15AB в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x2408 (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x74A98418 in C:\Windows\System32\msvcrt.dll: strchr()
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6A9 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (81):
+
+     79:         for(int nk=0; nk<4; nk++)
+     80:         {
+=>   81:             drawButton(btn[nk]);
+     82:         }
+     83: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13432):
+
+  13430: $   RECT r = { ROUND (x0), ROUND (y0), ROUND (x1), ROUND (y1) };
+  13431: 
+=>13432: $   if (!strchr (text, '\n')) format |= DT_SINGLELINE;
+  13433: 
+  13434: $   unsigned prev = txSetTextAlign (TA_LEFT | TA_TOP | TA_NOUPDATECP, dc);
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:22:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:22:50
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x74A98418 в функции strchr(). Попытка прочесть данные по адресу 0x38EB15AB в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x2408 (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x74A98418 in C:\Windows\System32\msvcrt.dll: strchr()
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6A9 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (81):
+
+     79:         for(int nk=0; nk<4; nk++)
+     80:         {
+=>   81:             drawButton(btn[nk]);
+     82:         }
+     83: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13432):
+
+  13430: $   RECT r = { ROUND (x0), ROUND (y0), ROUND (x1), ROUND (y1) };
+  13431: 
+=>13432: $   if (!strchr (text, '\n')) format |= DT_SINGLELINE;
+  13433: 
+  13434: $   unsigned prev = txSetTextAlign (TA_LEFT | TA_TOP | TA_NOUPDATECP, dc);
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:22:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:22:50
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x74A98418 в функции strchr(). Попытка прочесть данные по адресу 0x7C0CE76E в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x2914 (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x74A98418 in C:\Windows\System32\msvcrt.dll: strchr()
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6A9 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (81):
+
+     79:         for(int nk=0; nk<4; nk++)
+     80:         {
+=>   81:             drawButton(btn[nk]);
+     82:         }
+     83: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13432):
+
+  13430: $   RECT r = { ROUND (x0), ROUND (y0), ROUND (x1), ROUND (y1) };
+  13431: 
+=>13432: $   if (!strchr (text, '\n')) format |= DT_SINGLELINE;
+  13433: 
+  13434: $   unsigned prev = txSetTextAlign (TA_LEFT | TA_TOP | TA_NOUPDATECP, dc);
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:23:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:24:00
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x74A98418 в функции strchr(). Попытка прочесть данные по адресу 0x7C0CE76E в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x2914 (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x74A98418 in C:\Windows\System32\msvcrt.dll: strchr()
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6A9 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (81):
+
+     79:         for(int nk=0; nk<4; nk++)
+     80:         {
+=>   81:             drawButton(btn[nk]);
+     82:         }
+     83: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13432):
+
+  13430: $   RECT r = { ROUND (x0), ROUND (y0), ROUND (x1), ROUND (y1) };
+  13431: 
+=>13432: $   if (!strchr (text, '\n')) format |= DT_SINGLELINE;
+  13433: 
+  13434: $   unsigned prev = txSetTextAlign (TA_LEFT | TA_TOP | TA_NOUPDATECP, dc);
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:23:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:24:00
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x74A98418 в функции strchr(). Попытка прочесть данные по адресу 0x314683C1 в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x219C (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x74A98418 in C:\Windows\System32\msvcrt.dll: strchr()
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6A9 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (81):
+
+     79:         for(int nk=0; nk<4; nk++)
+     80:         {
+=>   81:             drawButton(btn[nk]);
+     82:         }
+     83: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13432):
+
+  13430: $   RECT r = { ROUND (x0), ROUND (y0), ROUND (x1), ROUND (y1) };
+  13431: 
+=>13432: $   if (!strchr (text, '\n')) format |= DT_SINGLELINE;
+  13433: 
+  13434: $   unsigned prev = txSetTextAlign (TA_LEFT | TA_TOP | TA_NOUPDATECP, dc);
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:24:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:25:07
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x74A98418 в функции strchr(). Попытка прочесть данные по адресу 0x314683C1 в модуле C:\Windows\System32\msvcrt.dll. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x219C (Main), GetLastError(): 6 (Неверный дескриптор). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x74A98418 in C:\Windows\System32\msvcrt.dll: strchr()
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6A9 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (81):
+
+     79:         for(int nk=0; nk<4; nk++)
+     80:         {
+=>   81:             drawButton(btn[nk]);
+     82:         }
+     83: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13432):
+
+  13430: $   RECT r = { ROUND (x0), ROUND (y0), ROUND (x1), ROUND (y1) };
+  13431: 
+=>13432: $   if (!strchr (text, '\n')) format |= DT_SINGLELINE;
+  13433: 
+  13434: $   unsigned prev = txSetTextAlign (TA_LEFT | TA_TOP | TA_NOUPDATECP, dc);
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:24:44, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:25:07
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: G:\PhotoRobot1\bin\Debug\PhotoRobot.exe, файл: c:\program files\codeblocks\mingw\include\txlib.h, строка: 13411, функция: bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "text".
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x48C (Main), GetLastError(): 160 (Неверны один или несколько аргументов). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00420C35 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: txDrawText() at c:/program files/codeblocks/mingw/include/txlib.h (13411)
+
+# 1 0x0042D317 in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawButton() at G:/PhotoRobot1/main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+# 2 0x0042D6AD in G:\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at G:/PhotoRobot1/main.cpp (88):
+
+     86:         for(int nk=0; nk<4; nk++)
+     87:         {
+=>   88:             drawButton(btn[nk]);
+     89:         }
+     90: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txDrawText(double, double, double, double, const char*, unsigned int, HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13411):
+
+  13409:                  HDC dc /*= txDC()*/)
+  13410:     {
+=>13411: $1  if (_TX_ARGUMENT_FAILED    (text)) return false;
+  13412: $   if (_TX_DEFAULT_HDC_FAILED (dc))   return false;
+  13413: 
+
+# 1 in void drawButton(Button) at G:\PhotoRobot1\main.cpp (38):
+
+     36:       txSetColor(TX_BLACK);
+     37:       txSelectFont("Times New Roman", 32);
+=>   38:       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
+     39: }
+     40: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 23 2022 18:33:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 23 2022 18:34:24
+
+Run file:	G:\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	G:\PhotoRobot1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\bin\Debug\PhotoRobot.exe, файл: c:\program files\codeblocks\mingw\include\txlib.h, строка: 13715, функция: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF),
+
+Сообщение: Прямоугольник копируемой области {0, 0, 97, 100} не полностью лежит внутри изображения-источника {0, 0, 94, 100}, функция txTransparentBlt() работать не будет.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x005072FC (32-bit), Flags: CMdRE0, Thread: 0x2A84 (Main), GetLastError(): 13 (Недопустимые данные). 
+From: c:\program files\codeblocks\mingw\include\txlib.h (13714) bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF).
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0042376E in D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\bin\Debug\PhotoRobot.exe: txTransparentBlt() at c:/program files/codeblocks/mingw/include/txlib.h (13715)
+
+# 1 0x0042D4E2 in D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\bin\Debug\PhotoRobot.exe: drawPicture() at D:/01 Ярослав/Ярослав/учёба/c++/2-й год в процессе/PhotoRobot1/main.cpp (63):
+
+     61: void drawPicture(Pictures pct)
+     62: {
+=>   63:  txTransparentBlt(txDC(), pct.x, pct.y, pct.w, pct.h, pct.image, 0, 0, TX_WHITE);
+     64: }
+     65: 
+
+# 2 0x0042E350 in D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\bin\Debug\PhotoRobot.exe: main() at D:/01 Ярослав/Ярослав/учёба/c++/2-й год в процессе/PhotoRobot1/main.cpp (185):
+
+    183:             for(int npic=6;npic <=8; npic++)
+    184:            {
+=>  185:              drawPicture(menuPickture[npic]);
+    186:            }
+    187:         }
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF) at c:\program files\codeblocks\mingw\include\txlib.h (13714):
+
+  13712:         {
+  13713: $       SetLastError (ERROR_INVALID_DATA);
+=>13714: $       TX_ERROR ("Прямоугольник копируемой области {%lg, %lg, %lg, %lg} не полностью лежит внутри изображения-источника {%d, %d, %d, %d}, "
+  13715:                   "функция txTransparentBlt() работать не будет.", xSource, ySource, xSource + width, ySource + height, 0, 0, (int) size.x, (int) size.y);
+  13716:         }
+
+# 1 in void drawPicture(Pictures) at D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp (63):
+
+     61: void drawPicture(Pictures pct)
+     62: {
+=>   63:  txTransparentBlt(txDC(), pct.x, pct.y, pct.w, pct.h, pct.image, 0, 0, TX_WHITE);
+     64: }
+     65: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Sep 30 2022 18:19:37, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Sep 30 2022 18:19:59
+
+Run file:	D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\bin\Debug\PhotoRobot.exe
+Directory:	D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1
+
+--------------------------------------------------
