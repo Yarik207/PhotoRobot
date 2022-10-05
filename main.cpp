@@ -3,6 +3,14 @@
 
 /*
 
+//! @brief
+//!
+//! @param
+//! @param
+//! @return
+//!
+//!
+
  txBitBlt(txDC(), 50, 100, 50, 65, nos);
 
         drawButton(btn[1]);
@@ -60,9 +68,8 @@ return(txMouseX() >= btn.x &&
 
 void drawPicture(Pictures pct)
 {
- Win32::txTransparentBlt(txDC(), pct.x, pct.y, pct.w, pct.h, pct.image, 0, 0, TX_WHITE, pct.w_scr, pct.h_scr);
+Win32::TransparentBlt(txDC(), pct.x, pct.y, pct.w_scr, pct.h_scr, pct.image, 0, 0,  pct.w, pct.h, TX_WHITE);
 }
-
 
 int main()
 {
@@ -206,4 +213,3 @@ while(!GetAsyncKeyState(VK_ESCAPE))
 
 return 0;
 }
-
