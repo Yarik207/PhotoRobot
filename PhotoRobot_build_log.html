@@ -4,76 +4,60 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>30-09-2022 at 19:08.18</u><br />
-Build ended on: <u>30-09-2022 at 19:08.21</u><p />
+Build started on: <u>12-10-2022 at 19:16.55</u><br />
+Build ended on: <u>12-10-2022 at 19:17.19</u><p />
 <b>-------------- Build: Debug in PhotoRobot (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
-g++git-auto.bat "D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp" -o bin\Debug\PhotoRobot.exe -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
+g++git-auto.bat "D:\Мигалов\ап2.1\main.cpp" -o bin\Debug\PhotoRobot.exe -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
 Compilation ERRORS:<br />
 <br />
-D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp: In function 'void drawButton(Button)':<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:35:7: warning: no previous declaration for 'void drawButton(Button)' [-Wmissing-declarations]</font><br />
+D:\Мигалов\ап2.1\main.cpp: In function 'void drawButton(Button)':<br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:26:7: warning: no previous declaration for 'void drawButton(Button)' [-Wmissing-declarations]</font><br />
  void  drawButton(Button btn)<br />
        ^<br />
-D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp: In function 'bool Click(Button)':<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:52:6: warning: no previous declaration for 'bool Click(Button)' [-Wmissing-declarations]</font><br />
+D:\Мигалов\ап2.1\main.cpp: In function 'bool Click(Button)':<br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:43:6: warning: no previous declaration for 'bool Click(Button)' [-Wmissing-declarations]</font><br />
  bool Click(Button btn)<br />
       ^<br />
-D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp: In function 'void drawPicture(Pictures)':<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:61:6: warning: no previous declaration for 'void drawPicture(Pictures)' [-Wmissing-declarations]</font><br />
+D:\Мигалов\ап2.1\main.cpp: In function 'void drawPicture(Pictures)':<br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:52:6: warning: no previous declaration for 'void drawPicture(Pictures)' [-Wmissing-declarations]</font><br />
  void drawPicture(Pictures pct)<br />
       ^<br />
-In file included from D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:2:0:<br />
-<font color="#ff0000">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:63:9: error: expected unqualified-id before '(' token</font><br />
-  Win32::txTransparentBlt(txDC(), pct.x, pct.y, pct.w, pct.h, pct.image, 0, 0, TX_WHITE, pct.w_scr, pct.h_scr);<br />
-         ^<br />
-<font color="#ff0000">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:63:9: error: no matching function for call to 'txTransparentBlt(HDC__*&amp;, int&amp;, int&amp;, int&amp;, int&amp;, HDC__*&amp;, int, int, const COLORREF&amp;, int&amp;, int&amp;)'</font><br />
-  Win32::txTransparentBlt(txDC(), pct.x, pct.y, pct.w, pct.h, pct.image, 0, 0, TX_WHITE, pct.w_scr, pct.h_scr);<br />
-         ^<br />
-D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:63:9: note: candidates are:<br />
-c:\program files\codeblocks\mingw\include\txlib.h:13686:6: note: bool {anonymous}::TX::txTransparentBlt(HDC, double, double, double, double, HDC, double, double, COLORREF)<br />
- bool txTransparentBlt (HDC destImage,   double xDest, double yDest, double width, double height,<br />
-      ^<br />
-c:\program files\codeblocks\mingw\include\txlib.h:13686:6: note:   candidate expects 9 arguments, 11 provided<br />
-c:\program files\codeblocks\mingw\include\txlib.h:13766:6: note: bool {anonymous}::TX::txTransparentBlt(double, double, HDC, COLORREF, double, double)<br />
- bool txTransparentBlt (double xDest, double yDest, HDC sourceImage,<br />
-      ^<br />
-c:\program files\codeblocks\mingw\include\txlib.h:13766:6: note:   candidate expects 6 arguments, 11 provided<br />
-D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp: In function 'int main()':<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:75:5: warning: unused variable 'nose' [-Wunused-variable]</font><br />
- HDC nose = txLoadImage ("Pictures/Нос/nose.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:76:5: warning: unused variable 'Nooose' [-Wunused-variable]</font><br />
- HDC Nooose = txLoadImage ("Pictures/Нос/Nooose.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:78:5: warning: unused variable 'eyes' [-Wunused-variable]</font><br />
- HDC eyes = txLoadImage ("Pictures/Глаза/eyes1.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:79:5: warning: unused variable 'eyes2' [-Wunused-variable]</font><br />
- HDC eyes2 = txLoadImage ("Pictures/Глаза/eyes2.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:81:5: warning: unused variable 'face1M' [-Wunused-variable]</font><br />
- HDC face1M = txLoadImage ("Pictures/Овал лица/face1M.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:82:5: warning: unused variable 'face2M' [-Wunused-variable]</font><br />
- HDC face2M = txLoadImage ("Pictures/Овал лица/face2M.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:83:5: warning: unused variable 'face3M' [-Wunused-variable]</font><br />
- HDC face3M = txLoadImage ("Pictures/Овал лица/face3M.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:85:5: warning: unused variable 'Hair1M' [-Wunused-variable]</font><br />
- HDC Hair1M = txLoadImage ("Pictures/Челка/Volosi1M.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:86:5: warning: unused variable 'Hair2M' [-Wunused-variable]</font><br />
- HDC Hair2M = txLoadImage ("Pictures/Челка/Volosi2M.bmp");<br />
-     ^<br />
-<font color="#0000ff">D:\01 Ярослав\Ярослав\учёба\c++\2-й год в процессе\PhotoRobot1\main.cpp:87:5: warning: unused variable 'Hair3M' [-Wunused-variable]</font><br />
- HDC Hair3M = txLoadImage ("Pictures/Челка/Volosi3M.bmp");<br />
-     ^<br />
+D:\Мигалов\ап2.1\main.cpp: In constructor 'Button::Button()':<br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:4:8: warning: 'Button::x' should be initialized in the member initialization list [-Weffc++]</font><br />
+ struct Button<br />
+        ^<br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:4:8: warning: 'Button::y' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:4:8: warning: 'Button::text' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:4:8: warning: 'Button::category' should be initialized in the member initialization list [-Weffc++]</font><br />
+D:\Мигалов\ап2.1\main.cpp: In function 'int main()':<br />
+D:\Мигалов\ап2.1\main.cpp:72:25: note: synthesized method 'Button::Button()' first required here <br />
+     Button btn[COUNT_BTN];<br />
+                         ^<br />
+D:\Мигалов\ап2.1\main.cpp: In constructor 'Pictures::Pictures()':<br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::x' should be initialized in the member initialization list [-Weffc++]</font><br />
+ struct Pictures<br />
+        ^<br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::y' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::image' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::w' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::h' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::w_scr' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::h_scr' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::category' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:12:8: warning: 'Pictures::visible' should be initialized in the member initialization list [-Weffc++]</font><br />
+D:\Мигалов\ап2.1\main.cpp: In function 'int main()':<br />
+D:\Мигалов\ап2.1\main.cpp:79:40: note: synthesized method 'Pictures::Pictures()' first required here <br />
+     Pictures menuPictures[COUNT_PICTURE];<br />
+                                        ^<br />
+<font color="#0000ff">D:\Мигалов\ап2.1\main.cpp:206:1: warning: stack usage might be unbounded [-Wstack-usage=]</font><br />
+ }<br />
+ ^<br />
 ------------------------------------------------------------------------------------------------------<br />
-Autosaving to the Git repository in D:/01 ///c++/2-   /PhotoRobot1/.git-auto/... <br />
-<font color="#a00000">Process terminated with status 1 (0 minutes, 2 seconds)</font><br />
-<font color="#a00000">2 errors, 13 warnings (0 minutes, 2 seconds)</font><br />
+Autosaving to the Git repository in D://2.1/.git-auto/... <br />
+Output size is 2,27 MB<br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 23 seconds)</font><br />
+<font color="#0000ff">0 errors, 17 warnings (0 minutes, 23 seconds)</font><br />
 </tt>
 </body>
 </html>
