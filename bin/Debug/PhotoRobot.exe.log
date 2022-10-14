@@ -2583,3 +2583,2179 @@ Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
 Directory:	D:\Мигалов\ап2.1
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0xCA4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4110 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 12 2022 19:22:25, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 12 2022 19:23:04
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0xCA4 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4110 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 12 2022 19:22:25, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 12 2022 19:23:05
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x1A90 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 12 2022 19:25:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 12 2022 19:26:06
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x1A90 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 12 2022 19:25:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 12 2022 19:26:07
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x3A18 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 16:47:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 16:48:11
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x3A18 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 16:47:53, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 16:48:11
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x32B8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:06:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:06:27
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x32B8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:06:09, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:06:27
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x13D0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:18:16, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:18:33
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x13D0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:18:16, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:18:34
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x3A68 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:27:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:28:15
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x3A68 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B411C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:27:57, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:28:15
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453263 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x14C0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453263 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40EC in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:30:39, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:30:56
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453263 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x14C0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453263 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40EC in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic].category == CentralPictures[npic1].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:30:39, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:30:56
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453263 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x3284 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453263 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40E0 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:33:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:33:46
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453263 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x3284 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453263 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40E0 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:33:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:33:47
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x2DF0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4110 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:38:39, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:38:57
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x2DF0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4110 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:38:39, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:38:57
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x2690 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4110 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:39:12, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:39:30
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453293 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x2690 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453293 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4110 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:39:12, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:39:30
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453263 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x31FC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453263 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40E0 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:40:40, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:40:57
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453263 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x31FC (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453263 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40E0 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:40:40, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:40:58
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453263 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x578 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453263 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40E0 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:42:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:42:55
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453263 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x578 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453263 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40E0 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:42:38, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:42:56
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004531E3 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x36A0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004531E3 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4060 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:46:58, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:47:16
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004531E3 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x36A0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004531E3 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4060 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:46:58, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:47:16
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004531E3 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x2A40 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004531E3 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4060 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:49:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:50:17
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004531E3 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x2A40 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004531E3 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4060 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:49:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:50:17
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004531E3 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0xFE0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004531E3 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4060 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:52:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:52:37
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004531E3 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0xFE0 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004531E3 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B4060 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:52:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:52:37
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453223 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x2018 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453223 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40A0 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:55:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:56:06
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00453223 в функции size() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x00000058 в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005082FC (32-bit), Flags: CMdRE0, Thread: 0x2018 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00453223 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: size() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004B40A0 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator==<char>() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/new (57):
+
+     55:   {
+     56:   public:
+=>   57:     bad_alloc() throw() { }
+     58: 
+     59:     // This declaration is not useless:
+
+# 2 0x0042E15A in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (145):
+
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+    144:         {
+=>  145:             if(CentralPictures[npic1].category == CentralPictures[npic].category)
+    146:             {
+    147:                 CentralPictures[npic1].visible = false;
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (141):
+
+    139:     txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+    140:     menuPictures[npic].visible &&
+=>  141:     txMouseButtons() == 1)
+    142:     {
+    143:         for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 14 2022 18:55:49, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 14 2022 18:56:06
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------

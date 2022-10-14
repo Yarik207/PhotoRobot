@@ -77,11 +77,11 @@ txTextCursor (false);
 
     //Массив иконок-меню левых
     Pictures menuPictures[COUNT_PICTURE];
-     menuPictures[0] = {50, 100, txLoadImage ("Pictures/Нос/nose.bmp"), 100, 100, 100, 100, "Нос", false};
+    menuPictures[0] = {50, 100, txLoadImage ("Pictures/Нос/nose.bmp"), 100, 100, 100, 100, "Нос", false};
     menuPictures[1] = {50, 200, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
     menuPictures[2] = {50, 300, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
     menuPictures[3] = {50, 100, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
-    menuPictures[4] = {50, 200, txLoadImage ("Pictures/Глаза/eyes2.bmp"), 100, 42, 100, 42, "Глаза", false};
+    menuPictures[4] = {50, 200, txLoadImage ("Pictures/Глаза/eyes2.bmp"), 100, 34, 100, 42, "Глаза", false};
     menuPictures[5] = {50, 300, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
     menuPictures[6] = {50, 100, txLoadImage ("Pictures/Овал лица/face1M.bmp"), 94, 100, 94, 100, "Лицо", false};
     menuPictures[7] = {50, 200, txLoadImage ("Pictures/Овал лица/face2M.bmp"), 97, 100, 97, 100, "Лицо", false};
@@ -93,17 +93,17 @@ txTextCursor (false);
     //Массив иконок-меню центральных
     Pictures CentralPictures[COUNT_PICTURE];
     CentralPictures[0] = {250, 200, txLoadImage ("Pictures/Нос/nose.bmp"), 100, 100, 100, 100, "Нос", false};
-    CentralPictures[1] = {250, 300, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
-    CentralPictures[2] = {250, 400, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
+    CentralPictures[1] = {250, 200, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
+    CentralPictures[2] = {250, 200, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
     CentralPictures[3] = {250, 200, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
-    CentralPictures[4] = {250, 300, txLoadImage ("Pictures/Глаза/eyes2.bmp"), 100, 42, 100, 42, "Глаза", false};
-    CentralPictures[5] = {250, 400, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
+    CentralPictures[4] = {250, 200, txLoadImage ("Pictures/Глаза/eyes2.bmp"), 100, 34, 100, 42, "Глаза", false};
+    CentralPictures[5] = {250, 200, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
     CentralPictures[6] = {250, 200, txLoadImage ("Pictures/Овал лица/face1M.bmp"), 94, 100, 94, 100, "Лицо", false};
-    CentralPictures[7] = {250, 300, txLoadImage ("Pictures/Овал лица/face2M.bmp"), 97, 100, 97, 100, "Лицо", false};
-    CentralPictures[8] = {250, 400, txLoadImage ("Pictures/Овал лица/face3M.bmp"), 70, 100, 70, 100, "Лицо", false};
+    CentralPictures[7] = {250, 200, txLoadImage ("Pictures/Овал лица/face2M.bmp"), 97, 100, 97, 100, "Лицо", false};
+    CentralPictures[8] = {250, 200, txLoadImage ("Pictures/Овал лица/face3M.bmp"), 70, 100, 70, 100, "Лицо", false};
     CentralPictures[9] = {250, 200, txLoadImage ("Pictures/Челка/Volosi1M.bmp"), 80, 100, 80, 100, "Волосы", false};
-    CentralPictures[10] ={250, 300, txLoadImage ("Pictures/Челка/Volosi2M.bmp"), 87, 100, 87, 100, "Волосы", false};
-    CentralPictures[11] ={250, 400, txLoadImage ("Pictures/Челка/Volosi3M.bmp"), 100, 97, 100, 97, "Волосы", false};
+    CentralPictures[10] ={250, 200, txLoadImage ("Pictures/Челка/Volosi2M.bmp"), 87, 100, 87, 100, "Волосы", false};
+    CentralPictures[11] ={250, 200, txLoadImage ("Pictures/Челка/Volosi3M.bmp"), 100, 97, 100, 97, "Волосы", false};
 
 
 
@@ -117,10 +117,10 @@ while(!GetAsyncKeyState(VK_ESCAPE))
 
     //центральные
 
-    //Центральных картинок рисование
-     for(int npic = 0; npic < COUNT_PICTURE; npic++)
+  //Левых картинок рисование
+    for(int npic = 0; npic < COUNT_PICTURE; npic++)
     {
-        drawPicture(CentralPictures[npic]);
+        drawPicture(menuPictures[npic]);
     }
 
     //Центральных картинок рисование
@@ -140,11 +140,11 @@ for(int npic = 0; npic < COUNT_PICTURE; npic++)
     menuPictures[npic].visible &&
     txMouseButtons() == 1)
     {
-        for(int npic1 = 0; npic < COUNT_PICTURE; npic1++)
+        for(int n1 = 0; n1 < COUNT_PICTURE; n1++)
         {
-            if(CentralPictures[npic1].category == CentralPictures[npic1].category)
+            if(CentralPictures[n1].category == CentralPictures[npic].category)
             {
-                CentralPictures[npic1].visible = false;
+                CentralPictures[n1].visible = false;
             }
         }
         CentralPictures[npic].visible = !CentralPictures[npic].visible;
@@ -158,12 +158,6 @@ for(int npic = 0; npic < COUNT_PICTURE; npic++)
     for(int nk=0; nk<4; nk++)
     {
         drawButton(btn[nk]);
-    }
-
-    //Левых картинок рисование
-    for(int npic = 0; npic < COUNT_PICTURE; npic++)
-    {
-        drawPicture(menuPictures[npic]);
     }
 
 
