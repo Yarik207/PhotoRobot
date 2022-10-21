@@ -4759,3 +4759,1267 @@ Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
 Directory:	D:\Мигалов\ап2.1
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045354C в функции _M_is_leaked() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x0000002E в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0xD50 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045354C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _M_is_leaked() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x0048260B in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: swap() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x00489FD9 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044DE6D in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042D463 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (98):
+
+     96:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     97:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   98:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+     99: 
+    100:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (98):
+
+     96:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     97:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   98:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+     99: 
+    100:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 18:41:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 18:42:06
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x0045354C в функции _M_is_leaked() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x0000002E в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0xD50 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0045354C in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _M_is_leaked() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x0048260B in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: swap() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x00489FD9 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044DE6D in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042D463 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (98):
+
+     96:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     97:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   98:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+     99: 
+    100:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (98):
+
+     96:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     97:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   98:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+     99: 
+    100:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 18:41:48, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 18:42:05
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004535EC в функции _M_is_leaked() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x0000002E в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x2A70 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004535EC in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _M_is_leaked() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004826AB in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: swap() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048A079 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044DF0D in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042D4E5 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (99):
+
+     97:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     98:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   99:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+    100: 
+    101:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (99):
+
+     97:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     98:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   99:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+    100: 
+    101:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 18:45:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 18:46:16
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004535EC в функции _M_is_leaked() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x0000002E в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x2A70 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004535EC in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _M_is_leaked() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004826AB in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: swap() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048A079 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044DF0D in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042D4E5 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (99):
+
+     97:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     98:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   99:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+    100: 
+    101:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (99):
+
+     97:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     98:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   99:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+    100: 
+    101:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 18:45:59, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 18:46:16
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004535EC в функции _M_is_leaked() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x0000002E в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x3978 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004535EC in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _M_is_leaked() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004826AB in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: swap() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048A079 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044DF0D in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042D4E5 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (99):
+
+     97:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     98:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   99:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+    100: 
+    101:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (99):
+
+     97:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     98:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   99:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+    100: 
+    101:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 18:48:41, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 18:49:00
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x004535EC в функции _M_is_leaked() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x0000002E в модуле D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x3978 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x004535EC in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _M_is_leaked() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x004826AB in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: swap() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x0048A079 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044DF0D in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: operator=() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042D4E5 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (99):
+
+     97:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     98:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   99:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+    100: 
+    101:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in int main() at D:\Мигалов\ап2.1\main.cpp (99):
+
+     97:     menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+     98:     menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+=>   99:     menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
+    100: 
+    101:     //Массив иконок-меню центральных
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 18:48:41, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 18:48:59
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x32B0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 18:49:54, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 18:50:13
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x1B08 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 18:56:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 18:57:03
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x21C8 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 19:03:19, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 19:03:37
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x3020 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 19:12:45, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 19:13:03
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x32AC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 19:16:55, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 19:17:12
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x2C74 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 19:18:27, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 19:18:44
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x37D0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042E9CB in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 19:25:35, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 19:25:52
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x8A0 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <=COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <=COUNT_PICTURE; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 19:29:47, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 19:30:04
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x2DAC (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <15; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <15; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 19:32:28, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 19:32:45
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 10851, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x1BF4 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x0041075E in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/codeblocks/codeblocks/mingw/include/txlib.h (10851)
+# 1 0x00421DB7 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13597)
+# 2 0x00422027 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13619)
+
+# 3 0x0042EA58 in D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe: main() at D:/Мигалов/ап2.1/main.cpp (211):
+
+    209:     for(int npic=0;npic <20; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (10851):
+
+  10849: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10850: $   if (                   !*dc)  return false;
+=>10851: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10852: 
+  10853: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13597):
+
+  13595: 
+  13596: $   HDC  dc = *pdc;
+=>13597: $   bool ok = _txBuffer_Delete (pdc);
+  13598: $   if (!ok) return false;
+  13599: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13619):
+
+  13617: bool txDeleteDC (HDC dc)
+  13618:     {
+=>13619: $1  return txDeleteDC (&dc);
+  13620:     }
+  13621: 
+
+# 3 in int main() at D:\Мигалов\ап2.1\main.cpp (211):
+
+    209:     for(int npic=0;npic <20; npic++)
+    210:    {
+=>  211:         txDeleteDC(CentralPictures[npic].image);
+    212:    }
+    213: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Oct 19 2022 19:33:08, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Oct 19 2022 19:33:25
+
+Run file:	D:\Мигалов\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	D:\Мигалов\ап2.1
+
+--------------------------------------------------

@@ -65,8 +65,8 @@ txDisableAutoPause();
 
 txTextCursor (false);
 
-    int COUNT_BTN = 4;
-    int COUNT_PICTURE = 12;
+    int COUNT_BTN = 5;
+    int COUNT_PICTURE = 15;
 
     //Массив кнопок
     Button btn[COUNT_BTN];
@@ -74,36 +74,43 @@ txTextCursor (false);
     btn[1] = {260, 50,"Стрижка", "Волосы"};
     btn[2] = {420, 50,"Разрез Глаз", "Глаза"};
     btn[3] = {580, 50,"Нос", "Нос"};
+    btn[4] = {740, 50,"Губы", "Губы"};
 
     //Массив иконок-меню левых
     Pictures menuPictures[COUNT_PICTURE];
-    menuPictures[0] = {50, 100, txLoadImage ("Pictures/Нос/nose.bmp"), 100, 100, 100, 100, "Нос", false};
-    menuPictures[1] = {50, 200, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
-    menuPictures[2] = {50, 300, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
+    menuPictures[0] = {50, 100, txLoadImage ("Pictures/Нос/nose1.bmp"), 100, 100, 100, 100, "Нос", false};
+    menuPictures[1] = {50, 200, txLoadImage ("Pictures/Нос/nose2.bmp"), 100, 100, 100, 100, "Нос", false};
+    menuPictures[2] = {50, 300, txLoadImage ("Pictures/Нос/nose3.bmp"), 100, 100, 100, 100, "Нос", false};
     menuPictures[3] = {50, 100, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
-    menuPictures[4] = {50, 200, txLoadImage ("Pictures/Глаза/eyes2.bmp"), 100, 34, 100, 42, "Глаза", false};
-    menuPictures[5] = {50, 300, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
+    menuPictures[4] = {50, 200, txLoadImage ("Pictures/Глаза/eyes2.bmp"), 100, 34, 100, 34, "Глаза", false};
+    menuPictures[5] = {50, 300, txLoadImage ("Pictures/Глаза/eyes3.bmp"), 100, 61, 100, 61, "Глаза", false};
     menuPictures[6] = {50, 100, txLoadImage ("Pictures/Овал лица/face1M.bmp"), 94, 100, 94, 100, "Лицо", false};
     menuPictures[7] = {50, 200, txLoadImage ("Pictures/Овал лица/face2M.bmp"), 97, 100, 97, 100, "Лицо", false};
     menuPictures[8] = {50, 300, txLoadImage ("Pictures/Овал лица/face3M.bmp"), 70, 100, 70, 100, "Лицо", false};
     menuPictures[9] = {50, 100, txLoadImage ("Pictures/Челка/Volosi1M.bmp"), 80, 100, 80, 100, "Волосы", false};
     menuPictures[10] ={50, 200, txLoadImage ("Pictures/Челка/Volosi2M.bmp"), 87, 100, 87, 100, "Волосы", false};
     menuPictures[11] ={50, 300, txLoadImage ("Pictures/Челка/Volosi3M.bmp"), 100, 97, 100, 97, "Волосы", false};
+    menuPictures[12] ={50, 100, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 100, 100, "Губы", false};
+    menuPictures[13] ={50, 200, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 100, 100, "Губы", false};
+    menuPictures[14] ={50, 300, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 100, 100, "Губы", false};
 
     //Массив иконок-меню центральных
     Pictures CentralPictures[COUNT_PICTURE];
-    CentralPictures[0] = {250, 200, txLoadImage ("Pictures/Нос/nose.bmp"), 100, 100, 100, 100, "Нос", false};
-    CentralPictures[1] = {250, 200, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
-    CentralPictures[2] = {250, 200, txLoadImage ("Pictures/Нос/Nooose.bmp"), 100, 100, 100, 100, "Нос", false};
-    CentralPictures[3] = {250, 200, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
-    CentralPictures[4] = {250, 200, txLoadImage ("Pictures/Глаза/eyes2.bmp"), 100, 34, 100, 42, "Глаза", false};
-    CentralPictures[5] = {250, 200, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 100, 35, "Глаза", false};
-    CentralPictures[6] = {250, 200, txLoadImage ("Pictures/Овал лица/face1M.bmp"), 94, 100, 94, 100, "Лицо", false};
-    CentralPictures[7] = {250, 200, txLoadImage ("Pictures/Овал лица/face2M.bmp"), 97, 100, 97, 100, "Лицо", false};
-    CentralPictures[8] = {250, 200, txLoadImage ("Pictures/Овал лица/face3M.bmp"), 70, 100, 70, 100, "Лицо", false};
-    CentralPictures[9] = {250, 200, txLoadImage ("Pictures/Челка/Volosi1M.bmp"), 80, 100, 80, 100, "Волосы", false};
-    CentralPictures[10] ={250, 200, txLoadImage ("Pictures/Челка/Volosi2M.bmp"), 87, 100, 87, 100, "Волосы", false};
-    CentralPictures[11] ={250, 200, txLoadImage ("Pictures/Челка/Volosi3M.bmp"), 100, 97, 100, 97, "Волосы", false};
+    CentralPictures[0] = {600, 400, txLoadImage ("Pictures/Нос/nose1.bmp"), 100, 100, 200, 200, "Нос", false};
+    CentralPictures[1] = {600, 400, txLoadImage ("Pictures/Нос/nose2.bmp"), 100, 100, 200, 200, "Нос", false};
+    CentralPictures[2] = {600, 400, txLoadImage ("Pictures/Нос/nose3.bmp"), 100, 100, 200, 200, "Нос", false};
+    CentralPictures[3] = {600, 400, txLoadImage ("Pictures/Глаза/eyes1.bmp"), 100, 35, 200, 70, "Глаза", false};
+    CentralPictures[4] = {600, 400, txLoadImage ("Pictures/Глаза/eyes2.bmp"), 100, 34, 200, 68, "Глаза", false};
+    CentralPictures[5] = {600, 400, txLoadImage ("Pictures/Глаза/eyes3.bmp"), 100, 61, 200, 122, "Глаза", false};
+    CentralPictures[6] = {600, 400, txLoadImage ("Pictures/Овал лица/face1M.bmp"), 94, 100, 188, 200, "Лицо", false};
+    CentralPictures[7] = {600, 400, txLoadImage ("Pictures/Овал лица/face2M.bmp"), 97, 100, 197, 100, "Лицо", false};
+    CentralPictures[8] = {600, 400, txLoadImage ("Pictures/Овал лица/face3M.bmp"), 70, 100, 140, 200, "Лицо", false};
+    CentralPictures[9] = {600, 400, txLoadImage ("Pictures/Челка/Volosi1M.bmp"), 80, 100, 160, 200, "Волосы", false};
+    CentralPictures[10] ={600, 400, txLoadImage ("Pictures/Челка/Volosi2M.bmp"), 87, 100, 174, 200, "Волосы", false};
+    CentralPictures[11] ={600, 400, txLoadImage ("Pictures/Челка/Volosi3M.bmp"), 100, 97, 200, 194, "Волосы", false};
+    CentralPictures[12] ={600, 400, txLoadImage ("Pictures/Губы/Gubi1.bmp"), 100, 100, 200, 200, "Губы", false};
+    CentralPictures[13] ={600, 400, txLoadImage ("Pictures/Губы/Gubi2.bmp"), 100, 100, 200, 200, "Губы", false};
+    CentralPictures[14] ={600, 400, txLoadImage ("Pictures/Губы/Gubi3.bmp"), 100, 100, 200, 200, "Губы", false};
 
 
 
@@ -131,31 +138,31 @@ while(!GetAsyncKeyState(VK_ESCAPE))
 
 
     //Центральных картинок рисование
-for(int npic = 0; npic < COUNT_PICTURE; npic++)
-{
-    if(txMouseX() >= menuPictures[npic].x &&
-    txMouseY() >= menuPictures[npic].y &&
-    txMouseX() <= menuPictures[npic].x + menuPictures[npic].w_scr &&
-    txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
-    menuPictures[npic].visible &&
-    txMouseButtons() == 1)
+    for(int npic = 0; npic < COUNT_PICTURE; npic++)
     {
-        for(int n1 = 0; n1 < COUNT_PICTURE; n1++)
+        if(txMouseX() >= menuPictures[npic].x &&
+        txMouseY() >= menuPictures[npic].y &&
+        txMouseX() <= menuPictures[npic].x + menuPictures[npic].w_scr &&
+        txMouseY() <= menuPictures[npic].y + menuPictures[npic].h_scr &&
+        menuPictures[npic].visible &&
+        txMouseButtons() == 1)
         {
-            if(CentralPictures[n1].category == CentralPictures[npic].category)
+            for(int n1 = 0; n1 < COUNT_PICTURE; n1++)
             {
-                CentralPictures[n1].visible = false;
+                if(CentralPictures[n1].category == CentralPictures[npic].category)
+                {
+                    CentralPictures[n1].visible = false;
+                }
             }
+            CentralPictures[npic].visible = !CentralPictures[npic].visible;
+            txSleep(100);
         }
-        CentralPictures[npic].visible = !CentralPictures[npic].visible;
-        txSleep(100);
     }
-}
 
        //ЛЕвые
 
     //Рисование кнопок
-    for(int nk=0; nk<4; nk++)
+    for(int nk=0; nk<5; nk++)
     {
         drawButton(btn[nk]);
     }
