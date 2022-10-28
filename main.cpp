@@ -67,6 +67,9 @@ txTextCursor (false);
 
     int COUNT_BTN = 5;
     int COUNT_PICTURE = 15;
+    int select = -1;
+    bool mouse_free = false;
+    char str[100];
 
     //Массив кнопок
     Button btn[COUNT_BTN];
@@ -122,7 +125,6 @@ while(!GetAsyncKeyState(VK_ESCAPE))
     txSetFillColor (TX_YELLOW);
     txClear();
 
-    //центральные
 
   //Левых картинок рисование
     for(int npic = 0; npic < COUNT_PICTURE; npic++)
@@ -159,7 +161,6 @@ while(!GetAsyncKeyState(VK_ESCAPE))
         }
     }
 
-       //ЛЕвые
 
     //Рисование кнопок
     for(int nk=0; nk<5; nk++)
@@ -185,10 +186,74 @@ while(!GetAsyncKeyState(VK_ESCAPE))
         }
     }
 
+     //выбор центральной картинки
+      for(int npic = 0; npic < COUNT_PICTURE; npic++)
+    {
+        if(txMouseX() >= CentralPictures[npic].x &&
+        txMouseY() >= CentralPictures[npic].y &&
+        txMouseX() <= CentralPictures[npic].x + CentralPictures[npic].w &&
+        txMouseY() <= CentralPictures[npic].y + CentralPictures[npic].h &&
+        CentralPictures[npic].visible &&
+        txMouseButtons() == 1)
+        {
+           select = npic;
+           mouse_free = false;
+
+
+        }
+    }
+
+    //Передвижение центральной картинки выбранной клавишами
+    if(select >= 0)
+    {
+        if(GetAsyncKeyState(VK_RIGHT)) CentralPictures[select].x += 3;
+        if(GetAsyncKeyState(VK_LEFT)) CentralPictures[select].x -= 3;
+        if(GetAsyncKeyState(VK_UP)) CentralPictures[select].y -= 3;
+        if(GetAsyncKeyState(VK_DOWN)) CentralPictures[select].y += 3;
+
+            if(GetAsyncKeyState(VK_OEM_PLUS))
+            {
+                CentralPictures[select].w_scr = CentralPictures[select].w_scr * 1.02;
+                CentralPictures[select].h_scr = CentralPictures[select].h_scr * 1.02;
+            }
+
+            if(GetAsyncKeyState(VK_OEM_MINUS))
+            {
+                CentralPictures[select].w_scr = CentralPictures[select].w_scr * 0.98;
+                CentralPictures[select].h_scr = CentralPictures[select].h_scr * 0.98;
+            }
+
+    }
+
+        //Передвижение центральной картинки выбранной  мыщкой
+    if(select >= 0)
+    {
+        if(txMouseButtons() == 1 && !mouse_free)
+        {
+            CentralPictures[select].x = txMouseX() - CentralPictures[select].w/2;
+            CentralPictures[select].y = txMouseY() - CentralPictures[select].h/2;
+        }
+        else
+        {
+            if(txMouseButtons() != 1)
+            {
+            mouse_free = true;
+            }
+
+        }
+    }
+
+
+
+
+
 
     txSleep(50);
     txEnd();
 }
+
+
+
 
 
     //Удаление левых
