@@ -98,7 +98,7 @@ txTextCursor (false);
 
 
     int COUNT_BTN = 10;
-    int COUNT_PICTURE = 50;
+    int COUNT_PICTURE = 36;
     int select = -1;
     bool mouse_free = false;
     char str[100];
@@ -113,97 +113,98 @@ txTextCursor (false);
 
     //Массив иконок-меню левых
     Pictures menuPictures[COUNT_PICTURE];
-    menuPictures[0] = {50, 100,"Pictures/Нос/nose1.bmp",  txLoadImage("Pictures/Нос/nose1.bmp")};
-    menuPictures[1] = {50, 200,"Pictures/Нос/nose2.bmp",  txLoadImage("Pictures/Нос/nose2.bmp")};
-    menuPictures[2] = {50, 300,"Pictures/Нос/nose3.bmp",  txLoadImage("Pictures/Нос/nose3.bmp")};
-    menuPictures[3] = {50, 400,"Pictures/Нос/nose4.bmp",  txLoadImage("Pictures/Нос/nose4.bmp")};
-    menuPictures[4] = {50, 500,"Pictures/Нос/nose5.bmp",  txLoadImage("Pictures/Нос/nose5.bmp")};
-    menuPictures[5] = {50, 600,"Pictures/Нос/nose6.bmp",  txLoadImage("Pictures/Нос/nose6.bmp")};
+    menuPictures[0] = {50, 100,"Pictures/Нос/nose1.bmp"};
+    menuPictures[1] = {50, 150,"Pictures/Нос/nose2.bmp"};
+    menuPictures[2] = {50, 200,"Pictures/Нос/nose3.bmp"};
+    menuPictures[3] = {50, 250,"Pictures/Нос/nose4.bmp"};
+    menuPictures[4] = {50, 300,"Pictures/Нос/nose5.bmp"};
+    menuPictures[5] = {50, 350,"Pictures/Нос/nose6.bmp"};
 
-    menuPictures[6]  = {50, 100,"Pictures/Лицо/face1M.bmp",  txLoadImage("Pictures/Лицо/face1M.bmp")};
-    menuPictures[7]  = {50, 200,"Pictures/Лицо/face2M.bmp",  txLoadImage("Pictures/Лицо/face2M.bmp")};
-    menuPictures[8]  = {50, 300,"Pictures/Лицо/face3M.bmp",  txLoadImage("Pictures/Лицо/face3M.bmp")};
-    menuPictures[9]  = {50, 400,"Pictures/Лицо/face4M.bmp",  txLoadImage("Pictures/Лицо/face4M.bmp")};
-    menuPictures[10] = {50, 500,"Pictures/Лицо/face5M.bmp",  txLoadImage("Pictures/Лицо/face5M.bmp")};
-    menuPictures[11] = {50, 600,"Pictures/Лицо/face5M.bmp",  txLoadImage("Pictures/Лицо/face6M.bmp")};
+    menuPictures[6]  = {50, 100,"Pictures/Лицо/face1M.bmp"};
+    menuPictures[7]  = {50, 150,"Pictures/Лицо/face2M.bmp"};
+    menuPictures[8]  = {50, 200,"Pictures/Лицо/face3M.bmp"};
+    menuPictures[9]  = {50, 250,"Pictures/Лицо/face4M.bmp"};
+    menuPictures[10] = {50, 300,"Pictures/Лицо/face5M.bmp"};
+    menuPictures[11] = {50, 350,"Pictures/Лицо/face5M.bmp"};
 
-    menuPictures[12] = {50, 100,"Pictures/Губы/lips1.bmp",  txLoadImage("Pictures/Губы/lips1.bmp")};
-    menuPictures[13] = {50, 200,"Pictures/Губы/lips2.bmp",  txLoadImage("Pictures/Губы/lips1.bmp")};
-    menuPictures[14] = {50, 300,"Pictures/Губы/lips3.bmp",  txLoadImage("Pictures/Губы/lips1.bmp")};
-    menuPictures[15] = {50, 400,"Pictures/Губы/lips4.bmp",  txLoadImage("Pictures/Губы/lips1.bmp")};
-    menuPictures[16] = {50, 500,"Pictures/Губы/lips5.bmp",  txLoadImage("Pictures/Губы/lips1.bmp")};
-    menuPictures[17] = {50, 600,"Pictures/Губы/lips6.bmp",  txLoadImage("Pictures/Губы/lips1.bmp")};
-    menuPictures[18] = {50, 700,"Pictures/Губы/lips7.bmp",  txLoadImage("Pictures/Губы/lips1.bmp")};
-    menuPictures[19] = {150, 100,"Pictures/Губы/lips8.bmp",  txLoadImage("Pictures/Губы/lips1.bmp")};
+    menuPictures[12] = {50, 100,"Pictures/Губы/lips1.bmp"};
+    menuPictures[13] = {50, 150,"Pictures/Губы/lips2.bmp"};
+    menuPictures[14] = {50, 200,"Pictures/Губы/lips3.bmp"};
+    menuPictures[15] = {50, 250,"Pictures/Губы/lips4.bmp"};
+    menuPictures[16] = {50, 300,"Pictures/Губы/lips5.bmp"};
+    menuPictures[17] = {50, 350,"Pictures/Губы/lips6.bmp"};
+    menuPictures[18] = {50, 400,"Pictures/Губы/lips7.bmp"};
+    menuPictures[19] = {50, 450,"Pictures/Губы/lips8.bmp"};
 
-    menuPictures[20] = {50, 100,"Pictures/Глаза/eyes1G.bmp",  txLoadImage("Pictures/Глаза/eyes1G.bmp")};
-    menuPictures[21] = {50, 200,"Pictures/Глаза/eyes2G.bmp",  txLoadImage("Pictures/Глаза/eyes2G.bmp")};
-    menuPictures[22] = {50, 300,"Pictures/Глаза/eyes3G.bmp",  txLoadImage("Pictures/Глаза/eyes3G.bmp")};
-    menuPictures[23] = {50, 400,"Pictures/Глаза/eyes4G.bmp",  txLoadImage("Pictures/Глаза/eyes4G.bmp")};
+    menuPictures[20] = {50, 100,"Pictures/Глаза/eyes1G.bmp"};
+    menuPictures[21] = {50, 150,"Pictures/Глаза/eyes2G.bmp"};
+    menuPictures[22] = {50, 200,"Pictures/Глаза/eyes3G.bmp"};
+    menuPictures[23] = {50, 250,"Pictures/Глаза/eyes4G.bmp"};
+    menuPictures[24] = {50, 300,"Pictures/Глаза/eyes1M.bmp"};
+    menuPictures[25] = {50, 350,"Pictures/Глаза/eyes2M.bmp"};
+    menuPictures[26] = {50, 400,"Pictures/Глаза/eyes3M.bmp"};
+    menuPictures[27] = {50, 450,"Pictures/Глаза/eyes4M.bmp"};
 
-    menuPictures[24] = {50, 500,"Pictures/Глаза/eyes1M.bmp",  txLoadImage("Pictures/Глаза/eyes1M.bmp")};
-    menuPictures[25] = {50, 600,"Pictures/Глаза/eyes2M.bmp",  txLoadImage("Pictures/Глаза/eyes2M.bmp")};
-    menuPictures[26] = {50, 700,"Pictures/Глаза/eyes3M.bmp",  txLoadImage("Pictures/Глаза/eyes3M.bmp")};
-    menuPictures[27] = {150, 100,"Pictures/Глаза/eyes4M.bmp",  txLoadImage("Pictures/Глаза/eyes4M.bmp")};
-
-    menuPictures[28] = {50, 100,"Pictures/Волосы/Hair1G.bmp",  txLoadImage("Pictures/Волосы/Hair1G.bmp")};
-    menuPictures[29] = {50, 200,"Pictures/Волосы/Hair2G.bmp",  txLoadImage("Pictures/Волосы/Hair2G.bmp")};
-    menuPictures[30] = {50, 300,"Pictures/Волосы/Hair3G.bmp",  txLoadImage("Pictures/Волосы/Hair3G.bmp")};
-    menuPictures[31] = {50, 400,"Pictures/Волосы/Hair4G.bmp",  txLoadImage("Pictures/Волосы/Hair4G.bmp")};
-
-    menuPictures[32] = {50, 500,"Pictures/Волосы/Hair1M.bmp",  txLoadImage("Pictures/Волосы/Hair1M.bmp")};
-    menuPictures[33] = {50, 600,"Pictures/Волосы/Hair2M.bmp",  txLoadImage("Pictures/Волосы/Hair2M.bmp")};
-    menuPictures[34] = {50, 700,"Pictures/Волосы/Hair3M.bmp",  txLoadImage("Pictures/Волосы/Hair3M.bmp")};
-    menuPictures[35] = {150, 100,"Pictures/Волосы/Hair4M.bmp",  txLoadImage("Pictures/Волосы/Hair4M.bmp")};
+    menuPictures[28] = {50, 100,"Pictures/Волосы/Hair1G.bmp"};
+    menuPictures[29] = {50, 150,"Pictures/Волосы/Hair2G.bmp"};
+    menuPictures[30] = {50, 200,"Pictures/Волосы/Hair3G.bmp"};
+    menuPictures[31] = {50, 250,"Pictures/Волосы/Hair4G.bmp"};
+    menuPictures[32] = {50, 300,"Pictures/Волосы/Hair1M.bmp"};
+    menuPictures[33] = {50, 350,"Pictures/Волосы/Hair2M.bmp"};
+    menuPictures[34] = {50, 400,"Pictures/Волосы/Hair3M.bmp"};
+    menuPictures[35] = {50, 450,"Pictures/Волосы/Hair4M.bmp"};
 
     //Массив иконок центральных
     Pictures CentralPictures[COUNT_PICTURE];
-    CentralPictures[0]   =  {600, 200};
-    CentralPictures[1]   =  {600, 200};
-    CentralPictures[2]   =  {600, 200};
-    CentralPictures[3]   =  {600, 200};
-    CentralPictures[4]   =  {600, 200};
-    CentralPictures[5]   =  {600, 200};
-
+    //Нос
+    CentralPictures[0]   =  {700, 200};
+    CentralPictures[1]   =  {700, 200};
+    CentralPictures[2]   =  {700, 200};
+    CentralPictures[3]   =  {700, 200};
+    CentralPictures[4]   =  {700, 200};
+    CentralPictures[5]   =  {700, 200};
+    //Лица
     CentralPictures[6]   =  {600, 300};
     CentralPictures[7]   =  {600, 300};
     CentralPictures[8]   =  {600, 300};
     CentralPictures[9]   =  {600, 300};
     CentralPictures[10]  =  {600, 300};
     CentralPictures[11]  =  {600, 300};
-
-    CentralPictures[12]  =  {600, 300};
-    CentralPictures[13]  =  {600, 400};
-    CentralPictures[14]  =  {600, 400};
-    CentralPictures[15]  =  {600, 400};
-    CentralPictures[16]  =  {600, 400};
-    CentralPictures[17]  =  {600, 400};
-    CentralPictures[18]  =  {600, 400};
-    CentralPictures[19]  =  {600, 400};
-    CentralPictures[20]  =  {600, 400};
-
-    CentralPictures[21]  =  {600, 500};
-    CentralPictures[22]  =  {600, 500};
-    CentralPictures[23]  =  {600, 500};
-    CentralPictures[24]  =  {600, 500};
-    CentralPictures[25]  =  {600, 500};
-    CentralPictures[26]  =  {600, 500};
-    CentralPictures[27]  =  {600, 500};
-    CentralPictures[28]  =  {600, 500};
-
-    CentralPictures[29]  =  {600, 600};
-    CentralPictures[30]  =  {600, 600};
-    CentralPictures[31]  =  {600, 600};
-    CentralPictures[32]  =  {600, 600};
-    CentralPictures[33]  =  {600, 600};
-    CentralPictures[34]  =  {600, 600};
-    CentralPictures[35]  =  {600, 600};
+    //Губы
+    CentralPictures[12]  =  {700, 300};
+    CentralPictures[13]  =  {700, 400};
+    CentralPictures[14]  =  {700, 400};
+    CentralPictures[15]  =  {700, 400};
+    CentralPictures[16]  =  {700, 400};
+    CentralPictures[17]  =  {700, 400};
+    CentralPictures[18]  =  {700, 400};
+    CentralPictures[19]  =  {700, 400};
+    //Глаза
+    CentralPictures[20]  =  {700, 465};
+    CentralPictures[21]  =  {700, 465};
+    CentralPictures[22]  =  {700, 465};
+    CentralPictures[23]  =  {700, 465};
+    CentralPictures[24]  =  {700, 465};
+    CentralPictures[25]  =  {700, 465};
+    CentralPictures[26]  =  {700, 465};
+    CentralPictures[27]  =  {700, 465};
+     //Волосы
+    CentralPictures[28]  =  {600, 275};
+    CentralPictures[29]  =  {600, 275};
+    CentralPictures[30]  =  {600, 275};
+    CentralPictures[31]  =  {600, 275};
+    CentralPictures[32]  =  {600, 275};
+    CentralPictures[33]  =  {600, 275};
+    CentralPictures[34]  =  {600, 275};
+    CentralPictures[35]  =  {600, 275};
 
 
 
     for(int npic = 0; npic < COUNT_PICTURE; npic++)
     {
-       // menuPictures[npic].image =  txLoadImage(menuPictures[npic].adress.c_str());
+         menuPictures[npic].image = txLoadImage(menuPictures[npic].adress.c_str());
+
+        //menuPictures[npic].image =  txLoadImage(menuPictures[npic].adress.c_str());
 
         menuPictures[npic].w = get_w(menuPictures[npic].adress);
 
@@ -223,26 +224,26 @@ txTextCursor (false);
 
         if(menuPictures[npic].category == "Лицо")
         {
-            menuPictures[npic].w_scr = 94;
-            menuPictures[npic].h_scr = 100;
+            menuPictures[npic].w_scr = 47;
+            menuPictures[npic].h_scr = 50;
         }
 
         if(menuPictures[npic].category == "Губы")
         {
-            menuPictures[npic].w_scr = 53;
-            menuPictures[npic].h_scr = 100;
+            menuPictures[npic].w_scr = 21;
+            menuPictures[npic].h_scr = 50;
         }
 
         if(menuPictures[npic].category == "Глаза")
         {
-            menuPictures[npic].w_scr = 100;
-            menuPictures[npic].h_scr = 38;
+            menuPictures[npic].w_scr = 50;
+            menuPictures[npic].h_scr = 16;
         }
 
         if(menuPictures[npic].category == "Волосы")
         {
-            menuPictures[npic].w_scr = 100;
-            menuPictures[npic].h_scr = 100;
+            menuPictures[npic].w_scr = 50;
+            menuPictures[npic].h_scr = 50;
         }
 
         menuPictures[npic].visible = false;
@@ -256,6 +257,36 @@ txTextCursor (false);
     CentralPictures[npic].visible = menuPictures[npic].visible;
     CentralPictures[npic].category = menuPictures[npic].category;
     }
+
+     /* if(CentralPictures[npic].category == "Нос")
+        {
+            CentralPictures[npic].x = 50;
+            CentralPictures[npic].y = 50;
+        }
+
+        if(CentralPictures[npic].category == "Лицо")
+        {
+            CentralPictures[npic].x = 600;
+            CentralPictures[npic].y = 300;
+        }
+
+        if(CentralPictures[npic].category == "Губы")
+        {
+            CentralPictures[npic].x = 53;
+            CentralPictures[npic].y = 100;
+        }
+
+        if(CentralPictures[npic].category == "Глаза")
+        {
+            CentralPictures[npic].x = 100;
+            CentralPictures[npic].y = 35;
+        }
+
+        if(CentralPictures[npic].category == "Волосы")
+        {
+            CentralPictures[npic].x = 600;
+            CentralPictures[npic].y = 275;
+        }       */
 
 while(!GetAsyncKeyState(VK_ESCAPE))
 {

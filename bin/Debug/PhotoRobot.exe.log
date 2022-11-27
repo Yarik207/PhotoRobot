@@ -7041,3 +7041,119 @@ Run file:	G:\ап2.1\bin\Debug\PhotoRobot.exe
 Directory:	G:\ап2.1
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13568, функция: HDC__* {anonymous}::TX::txLoadImage(const char*, int, int, unsigned int, unsigned int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "filename && *filename".
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x0050C2FC (32-bit), Flags: CMdRE0, Thread: 0x282C (Main), GetLastError(): 160 (Неверны один или несколько аргументов). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00421906 in E:\ап2.1\bin\Debug\PhotoRobot.exe: txLoadImage() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13568)
+
+# 1 0x0042FA0F in E:\ап2.1\bin\Debug\PhotoRobot.exe: main() at E:/ап2.1/main.cpp (206):
+
+    204:     for(int npic = 0; npic < COUNT_PICTURE; npic++)
+    205:     {
+=>  206:          menuPictures[npic].image = txLoadImage(menuPictures[npic].adress.c_str());
+    207: 
+    208:         //menuPictures[npic].image =  txLoadImage(menuPictures[npic].adress.c_str());
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HDC__* {anonymous}::TX::txLoadImage(const char*, int, int, unsigned int, unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13568):
+
+  13566:                  unsigned imageFlags /*= IMAGE_BITMAP*/, unsigned loadFlags /*= LR_LOADFROMFILE*/)
+  13567:     {
+=>13568: $1  if (_TX_ARGUMENT_FAILED (filename && *filename)) return NULL;
+  13569: 
+  13570: $   HBITMAP image = (HBITMAP) Win32::LoadImage ((loadFlags & LR_LOADFROMFILE)? NULL : GetModuleHandle (NULL),
+
+# 1 in int main() at E:\ап2.1\main.cpp (206):
+
+    204:     for(int npic = 0; npic < COUNT_PICTURE; npic++)
+    205:     {
+=>  206:          menuPictures[npic].image = txLoadImage(menuPictures[npic].adress.c_str());
+    207: 
+    208:         //menuPictures[npic].image =  txLoadImage(menuPictures[npic].adress.c_str());
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 25 2022 18:11:03, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 25 2022 18:11:25
+
+Run file:	E:\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	E:\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\codeblocks\codeblocks\mingw\include\txlib.h, строка: 13568, функция: HDC__* {anonymous}::TX::txLoadImage(const char*, int, int, unsigned int, unsigned int),
+
+Сообщение: ВНЕЗАПНО: Логическая ошибка: Неверно, что "filename && *filename".
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x0050B2FC (32-bit), Flags: CMdRE0, Thread: 0x1F78 (Main), GetLastError(): 160 (Неверны один или несколько аргументов). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00421906 in E:\ап2.1\bin\Debug\PhotoRobot.exe: txLoadImage() at c:/codeblocks/codeblocks/mingw/include/txlib.h (13568)
+
+# 1 0x0042EF17 in E:\ап2.1\bin\Debug\PhotoRobot.exe: main() at E:/ап2.1/main.cpp (206):
+
+    204:     for(int npic = 0; npic < COUNT_PICTURE; npic++)
+    205:     {
+=>  206:          menuPictures[npic].image = txLoadImage(menuPictures[npic].adress.c_str());
+    207: 
+    208:         //menuPictures[npic].image =  txLoadImage(menuPictures[npic].adress.c_str());
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in HDC__* {anonymous}::TX::txLoadImage(const char*, int, int, unsigned int, unsigned int) at c:\codeblocks\codeblocks\mingw\include\txlib.h (13568):
+
+  13566:                  unsigned imageFlags /*= IMAGE_BITMAP*/, unsigned loadFlags /*= LR_LOADFROMFILE*/)
+  13567:     {
+=>13568: $1  if (_TX_ARGUMENT_FAILED (filename && *filename)) return NULL;
+  13569: 
+  13570: $   HBITMAP image = (HBITMAP) Win32::LoadImage ((loadFlags & LR_LOADFROMFILE)? NULL : GetModuleHandle (NULL),
+
+# 1 in int main() at E:\ап2.1\main.cpp (206):
+
+    204:     for(int npic = 0; npic < COUNT_PICTURE; npic++)
+    205:     {
+=>  206:          menuPictures[npic].image = txLoadImage(menuPictures[npic].adress.c_str());
+    207: 
+    208:         //menuPictures[npic].image =  txLoadImage(menuPictures[npic].adress.c_str());
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Nov 25 2022 18:16:31, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Nov 25 2022 18:16:54
+
+Run file:	E:\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	E:\ап2.1
+
+--------------------------------------------------
