@@ -1,4 +1,11 @@
 #include "TXLib.h"
+#include "dirent.h"
+#include <fstream>
+#include <iostream>
+#include <conio.h>
+#include <stdlib.h>
+
+
 
 //Структура Кнопки
 struct Button
@@ -88,6 +95,28 @@ int get_h(string adress)
 
 }
 
+int readFromDir(string adress, Pictures menuPictures[], int COUNT_PICTURE)
+{
+    DIR  * dir;
+    struct dirent *ent;
+    int lastY = 100;
+     if((dir = opendir (adress.c_str())) != NULL)
+     {
+         while ((ent = readdir (dir))!= NULL)
+         {
+             if((string)ent->d_name != "." && ent->d_name != "..")
+             {
+                 menuPictures[COUNT_PICTURE].y  = lastY;
+                 menuPictures[COUNT_PICTURE].adress = adress + (string)ent->d_name;
+                 COUNT_PICTURE++;
+                 lastY +=100;
+             }
+         }
+         closedir (dir);
+     }
+     return COUNT_PICTURE ;
+}
+
 int main()
 {
 txCreateWindow (1200, 800);
@@ -98,7 +127,7 @@ txTextCursor (false);
 
 
     int COUNT_BTN = 10;
-    int COUNT_PICTURE = 36;
+    int COUNT_PICTURE = 100;
     int select = -1;
     bool mouse_free = false;
     char str[100];
@@ -110,10 +139,20 @@ txTextCursor (false);
     btn[2] = {420, 50,"Разрез Глаз", "Глаза"};
     btn[3] = {580, 50,"Нос", "Нос"};
     btn[4] = {740, 50,"Губы", "Губы"};
+    btn[5] = {900, 50, "Сохранить"};
+    btn[6] = {1060, 50, "Загрузить"};
+    btn[7] = {1120, 50, "Выход"};
 
     //Массив иконок-меню левых
-    Pictures menuPictures[COUNT_PICTURE];
-    menuPictures[0] = {50, 100,"Pictures/Нос/nose1.bmp"};
+    Pictures menuPictures[100];
+
+        COUNT_PICTURE = readFromDir("Pictures/Нос/",  menuPictures, COUNT_PICTURE) ;
+        COUNT_PICTURE = readFromDir("Pictures/Лицо/",  menuPictures, COUNT_PICTURE) ;
+        COUNT_PICTURE = readFromDir("Pictures/Губы/",  menuPictures, COUNT_PICTURE) ;
+        COUNT_PICTURE = readFromDir("Pictures/Глаза/",  menuPictures, COUNT_PICTURE) ;
+
+
+   /* menuPictures[0] = {50, 100,"Pictures/Нос/nose1.bmp"};
     menuPictures[1] = {50, 150,"Pictures/Нос/nose2.bmp"};
     menuPictures[2] = {50, 200,"Pictures/Нос/nose3.bmp"};
     menuPictures[3] = {50, 250,"Pictures/Нос/nose4.bmp"};
@@ -152,17 +191,17 @@ txTextCursor (false);
     menuPictures[32] = {50, 300,"Pictures/Волосы/Hair1M.bmp"};
     menuPictures[33] = {50, 350,"Pictures/Волосы/Hair2M.bmp"};
     menuPictures[34] = {50, 400,"Pictures/Волосы/Hair3M.bmp"};
-    menuPictures[35] = {50, 450,"Pictures/Волосы/Hair4M.bmp"};
+    menuPictures[35] = {50, 450,"Pictures/Волосы/Hair4M.bmp"};*/
 
     //Массив иконок центральных
     Pictures CentralPictures[COUNT_PICTURE];
     //Нос
-    CentralPictures[0]   =  {700, 200};
-    CentralPictures[1]   =  {700, 200};
-    CentralPictures[2]   =  {700, 200};
-    CentralPictures[3]   =  {700, 200};
-    CentralPictures[4]   =  {700, 200};
-    CentralPictures[5]   =  {700, 200};
+    CentralPictures[0]   =  {765, 500};
+    CentralPictures[1]   =  {765, 500};
+    CentralPictures[2]   =  {765, 500};
+    CentralPictures[3]   =  {765, 500};
+    CentralPictures[4]   =  {765, 500};
+    CentralPictures[5]   =  {765, 500};
     //Лица
     CentralPictures[6]   =  {600, 300};
     CentralPictures[7]   =  {600, 300};
@@ -171,14 +210,14 @@ txTextCursor (false);
     CentralPictures[10]  =  {600, 300};
     CentralPictures[11]  =  {600, 300};
     //Губы
-    CentralPictures[12]  =  {700, 300};
-    CentralPictures[13]  =  {700, 400};
-    CentralPictures[14]  =  {700, 400};
-    CentralPictures[15]  =  {700, 400};
-    CentralPictures[16]  =  {700, 400};
-    CentralPictures[17]  =  {700, 400};
-    CentralPictures[18]  =  {700, 400};
-    CentralPictures[19]  =  {700, 400};
+    CentralPictures[12]  =  {700, 600};
+    CentralPictures[13]  =  {700, 600};
+    CentralPictures[14]  =  {700, 600};
+    CentralPictures[15]  =  {700, 600};
+    CentralPictures[16]  =  {700, 600};
+    CentralPictures[17]  =  {700, 600};
+    CentralPictures[18]  =  {700, 600};
+    CentralPictures[19]  =  {700, 600};
     //Глаза
     CentralPictures[20]  =  {700, 465};
     CentralPictures[21]  =  {700, 465};
@@ -203,8 +242,6 @@ txTextCursor (false);
     for(int npic = 0; npic < COUNT_PICTURE; npic++)
     {
          menuPictures[npic].image = txLoadImage(menuPictures[npic].adress.c_str());
-
-        //menuPictures[npic].image =  txLoadImage(menuPictures[npic].adress.c_str());
 
         menuPictures[npic].w = get_w(menuPictures[npic].adress);
 

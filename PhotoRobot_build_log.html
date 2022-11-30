@@ -4,90 +4,94 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>25-11-2022 at 19:28.01</u><br />
-Build ended on: <u>25-11-2022 at 19:28.16</u><p />
+Build started on: <u>30-11-2022 at 19:19.32</u><br />
+Build ended on: <u>30-11-2022 at 19:19.47</u><p />
 <b>-------------- Build: Debug in PhotoRobot (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
 g++git-auto.bat "E:\ап2.1\main.cpp" -o bin\Debug\PhotoRobot.exe -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
 Compilation ERRORS:<br />
 <br />
 E:\ап2.1\main.cpp: In function 'void drawButton(Button)':<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:27:7: warning: no previous declaration for 'void drawButton(Button)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:34:7: warning: no previous declaration for 'void drawButton(Button)' [-Wmissing-declarations]</font><br />
  void  drawButton(Button btn)<br />
        ^<br />
 E:\ап2.1\main.cpp: In function 'bool Click(Button)':<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:44:6: warning: no previous declaration for 'bool Click(Button)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:51:6: warning: no previous declaration for 'bool Click(Button)' [-Wmissing-declarations]</font><br />
  bool Click(Button btn)<br />
       ^<br />
 E:\ап2.1\main.cpp: In function 'void drawPicture(Pictures)':<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:53:6: warning: no previous declaration for 'void drawPicture(Pictures)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:60:6: warning: no previous declaration for 'void drawPicture(Pictures)' [-Wmissing-declarations]</font><br />
  void drawPicture(Pictures pct)<br />
       ^<br />
 E:\ап2.1\main.cpp: In function 'int get_w(std::string)':<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:61:5: warning: no previous declaration for 'int get_w(std::string)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:68:5: warning: no previous declaration for 'int get_w(std::string)' [-Wmissing-declarations]</font><br />
  int get_w(string adress)<br />
      ^<br />
 E:\ап2.1\main.cpp: In function 'int get_h(std::string)':<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:76:5: warning: no previous declaration for 'int get_h(std::string)' [-Wmissing-declarations]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:83:5: warning: no previous declaration for 'int get_h(std::string)' [-Wmissing-declarations]</font><br />
  int get_h(string adress)<br />
      ^<br />
+E:\ап2.1\main.cpp: In function 'int readFromDir(std::string, Pictures*, int)':<br />
+<font color="#0000ff">E:\ап2.1\main.cpp:98:5: warning: no previous declaration for 'int readFromDir(std::string, Pictures*, int)' [-Wmissing-declarations]</font><br />
+ int readFromDir(string adress, Pictures menuPictures[], int COUNT_PICTURE)<br />
+     ^<br />
 E:\ап2.1\main.cpp: In constructor 'Button::Button()':<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:4:8: warning: 'Button::x' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:11:8: warning: 'Button::x' should be initialized in the member initialization list [-Weffc++]</font><br />
  struct Button<br />
         ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:4:8: warning: 'Button::y' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:4:8: warning: 'Button::text' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:4:8: warning: 'Button::category' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:11:8: warning: 'Button::y' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:11:8: warning: 'Button::text' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:11:8: warning: 'Button::category' should be initialized in the member initialization list [-Weffc++]</font><br />
 E:\ап2.1\main.cpp: In function 'int main()':<br />
-E:\ап2.1\main.cpp:107:25: note: synthesized method 'Button::Button()' first required here <br />
+E:\ап2.1\main.cpp:136:25: note: synthesized method 'Button::Button()' first required here <br />
      Button btn[COUNT_BTN];<br />
                          ^<br />
 E:\ап2.1\main.cpp: In constructor 'Pictures::Pictures()':<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::x' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::x' should be initialized in the member initialization list [-Weffc++]</font><br />
  struct Pictures<br />
         ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::y' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::adress' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::image' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::w' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::h' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::w_scr' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::h_scr' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::category' should be initialized in the member initialization list [-Weffc++]</font><br />
-<font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Pictures::visible' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::y' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::adress' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::image' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::w' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::h' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::w_scr' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::h_scr' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::category' should be initialized in the member initialization list [-Weffc++]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:19:8: warning: 'Pictures::visible' should be initialized in the member initialization list [-Weffc++]</font><br />
 E:\ап2.1\main.cpp: In function 'int main()':<br />
-E:\ап2.1\main.cpp:115:40: note: synthesized method 'Pictures::Pictures()' first required here <br />
-     Pictures menuPictures[COUNT_PICTURE];<br />
-                                        ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:382:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+E:\ап2.1\main.cpp:147:30: note: synthesized method 'Pictures::Pictures()' first required here <br />
+     Pictures menuPictures[100];<br />
+                              ^<br />
+<font color="#0000ff">E:\ап2.1\main.cpp:421:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
                  CentralPictures[select].w_scr = CentralPictures[select].w_scr * 1.02;<br />
                                                                                ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:383:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:422:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
                  CentralPictures[select].h_scr = CentralPictures[select].h_scr * 1.02;<br />
                                                                                ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:388:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:427:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
                  CentralPictures[select].w_scr = CentralPictures[select].w_scr * 0.98;<br />
                                                                                ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:389:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:428:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
                  CentralPictures[select].h_scr = CentralPictures[select].h_scr * 0.98;<br />
                                                                                ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:399:52: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:438:52: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
              CentralPictures[select].x = txMouseX() - CentralPictures[select].w/2;<br />
                                                     ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:400:52: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:439:52: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
              CentralPictures[select].y = txMouseY() - CentralPictures[select].h/2;<br />
                                                     ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:104:10: warning: unused variable 'str' [-Wunused-variable]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:133:10: warning: unused variable 'str' [-Wunused-variable]</font><br />
      char str[100];<br />
           ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:429:1: warning: stack usage might be unbounded [-Wstack-usage=]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:468:1: warning: stack usage might be unbounded [-Wstack-usage=]</font><br />
  }<br />
  ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in E:/2.1/.git-auto/... <br />
 Output size is 2,29 MB<br />
-<font color="#0000ff">Process terminated with status 0 (0 minutes, 15 seconds)</font><br />
-<font color="#0000ff">0 errors, 27 warnings (0 minutes, 15 seconds)</font><br />
+<font color="#0000ff">Process terminated with status 0 (0 minutes, 14 seconds)</font><br />
+<font color="#0000ff">0 errors, 28 warnings (0 minutes, 14 seconds)</font><br />
 </tt>
 </body>
 </html>
