@@ -7993,3 +7993,171 @@ Run file:	E:\ап2.1\bin\Debug\PhotoRobot.exe
 Directory:	E:\ап2.1
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib предупреждает:
+
+Программа: E:\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00452F4C в функции _M_is_leaked() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x000001EC в модуле E:\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x1CF8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00452F4C in E:\ап2.1\bin\Debug\PhotoRobot.exe: _M_is_leaked() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x00481A03 in E:\ап2.1\bin\Debug\PhotoRobot.exe: _M_grab() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x00487CAF in E:\ап2.1\bin\Debug\PhotoRobot.exe at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044D621 in E:\ап2.1\bin\Debug\PhotoRobot.exe at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042D827 in E:\ап2.1\bin\Debug\PhotoRobot.exe: main() at E:/ап2.1/main.cpp (304):
+
+    302:     for(int nk=0; nk<=5; nk++)
+    303:     {
+=>  304:         if (Click(btn[nk]))
+    305:         {
+    306:             txMessageBox ("Сохранено", "Спасибо" , MB_ICONINFORMATION);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool Click(Button) at E:\ап2.1\main.cpp (54):
+
+     52: bool Click(Button btn)
+     53: {
+=>   54: return(txMouseX() >= btn.x &&
+     55:        txMouseY() >= btn.y &&
+     56:        txMouseX() <= btn.x  &&
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec  9 2022 18:49:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2022 18:50:02
+
+Run file:	E:\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	E:\ап2.1
+
+--------------------------------------------------
+
+--------------------------------------------------
+TXLib соболезнует...
+
+Программа: E:\ап2.1\bin\Debug\PhotoRobot.exe,
+
+ВНЕЗАПНО: signal (11, 0x00): SIGSEGV: Доступ по неверному указателю. Ставьте ассерты! 
+
+Нарушение доступа к памяти.
+
+#1: Исключение EXCEPTION_ACCESS_VIOLATION (0xC0000005) при выполнении кода по адресу 0x00452F4C в функции _M_is_leaked() в файле c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h на строке 45. Попытка прочесть данные по адресу 0x000001EC в модуле E:\ап2.1\bin\Debug\PhotoRobot.exe. Спасибо _txVectoredExceptionHandler(), что сообщил. Люблю его <3
+
+С помощью функции signal() вы можете сами обработать эту ошибку.
+
+#2: TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400], Instance: 0x005092FC (32-bit), Flags: CMdRE0, Thread: 0x1CF8 (Main). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00452F4C in E:\ап2.1\bin\Debug\PhotoRobot.exe: _M_is_leaked() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 1 0x00481A03 in E:\ап2.1\bin\Debug\PhotoRobot.exe: _M_grab() at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 2 0x00487CAF in E:\ап2.1\bin\Debug\PhotoRobot.exe at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 3 0x0044D621 in E:\ап2.1\bin\Debug\PhotoRobot.exe at c:/codeblocks/codeblocks/mingw/include/c++/4.8.1/debug/functions.h (45):
+
+     43:   // An arbitrary iterator pointer is not singular.
+     44:   inline bool
+=>   45:   __check_singular_aux(const void*) { return false; }
+     46: 
+     47:   // We may have an iterator that derives from _Safe_iterator_base but isn't
+
+# 4 0x0042D827 in E:\ап2.1\bin\Debug\PhotoRobot.exe: main() at E:/ап2.1/main.cpp (304):
+
+    302:     for(int nk=0; nk<=5; nk++)
+    303:     {
+=>  304:         if (Click(btn[nk]))
+    305:         {
+    306:             txMessageBox ("Сохранено", "Спасибо" , MB_ICONINFORMATION);
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool Click(Button) at E:\ап2.1\main.cpp (54):
+
+     52: bool Click(Button btn)
+     53: {
+=>   54: return(txMouseX() >= btn.x &&
+     55:        txMouseY() >= btn.y &&
+     56:        txMouseX() <= btn.x  &&
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2022-07-23 02:08:28 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\codeblocks\codeblocks\mingw\include\txlib.h
+Compiled:	Dec  9 2022 18:49:42, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 09 2022 18:50:01
+
+Run file:	E:\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	E:\ап2.1
+
+--------------------------------------------------
