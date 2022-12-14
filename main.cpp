@@ -404,7 +404,7 @@ while(!GetAsyncKeyState(VK_ESCAPE))
         {
             for (int npic = 0; npic < COUNT_PICTURE; npic++)
             {
-                CentralPictures[npic].visible = true;
+                CentralPictures[npic].visible = false;
             }
 
         char buff[50];
