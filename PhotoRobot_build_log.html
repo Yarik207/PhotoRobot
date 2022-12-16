@@ -4,8 +4,8 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" /></head>
 <body>
 <tt>
-Build started on: <u>14-12-2022 at 18:13.23</u><br />
-Build ended on: <u>14-12-2022 at 18:13.38</u><p />
+Build started on: <u>16-12-2022 at 18:53.31</u><br />
+Build ended on: <u>16-12-2022 at 18:53.47</u><p />
 <b>-------------- Build: Debug in PhotoRobot (compiler: NOT FOR PROJECTS! = MinGW GCC + Strict + Fast + Save (Requires Git))---------------</b><br />
 g++git-auto.bat "E:\ап2.1\main.cpp" -o bin\Debug\PhotoRobot.exe -mwindows  -Wall -fexceptions  -g  -Wshadow -Winit-self -Wredundant-decls -Wcast-align -Wundef -Wfloat-equal -Winline -Wunreachable-code -Wmissing-declarations -Wmissing-include-dirs -Wswitch-enum -Wswitch-default -Weffc++ -Wmain -Wextra -Wall -g -pipe -fexceptions -Wcast-qual -Wconversion -Wctor-dtor-privacy -Wempty-body -Wformat-security -Wformat=2 -Wignored-qualifiers -Wlogical-op -Wmissing-field-initializers -Wnon-virtual-dtor -Woverloaded-virtual -Wpointer-arith -Wsign-promo -Wstack-usage=8192 -Wstrict-aliasing -Wstrict-null-sentinel -Wtype-limits -Wwrite-strings -D_DEBUG -D_EJUDGE_CLIENT_SIDE -D_EJC<br />
 ------------------------------------------------------------------------------------------------------<br />
@@ -35,6 +35,10 @@ E:\ап2.1\main.cpp: In function 'int readFromDir(std::string, Pictures*, int)':
 <font color="#0000ff">E:\ап2.1\main.cpp:99:5: warning: no previous declaration for 'int readFromDir(std::string, Pictures*, int)' [-Wmissing-declarations]</font><br />
  int readFromDir(string adress, Pictures menuPictures[], int COUNT_PICTURE)<br />
      ^<br />
+E:\ап2.1\main.cpp: In function 'std::string runFileDialog(bool)':<br />
+<font color="#0000ff">E:\ап2.1\main.cpp:121:8: warning: no previous declaration for 'std::string runFileDialog(bool)' [-Wmissing-declarations]</font><br />
+ string runFileDialog(bool isSave)<br />
+        ^<br />
 E:\ап2.1\main.cpp: In constructor 'Button::Button()':<br />
 <font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Button::x' should be initialized in the member initialization list [-Weffc++]</font><br />
  struct Button<br />
@@ -43,7 +47,7 @@ E:\ап2.1\main.cpp: In constructor 'Button::Button()':<br />
 <font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Button::text' should be initialized in the member initialization list [-Weffc++]</font><br />
 <font color="#0000ff">E:\ап2.1\main.cpp:12:8: warning: 'Button::category' should be initialized in the member initialization list [-Weffc++]</font><br />
 E:\ап2.1\main.cpp: In function 'int main()':<br />
-E:\ап2.1\main.cpp:140:25: note: synthesized method 'Button::Button()' first required here <br />
+E:\ап2.1\main.cpp:184:25: note: synthesized method 'Button::Button()' first required here <br />
      Button btn[COUNT_BTN];<br />
                          ^<br />
 E:\ап2.1\main.cpp: In constructor 'Pictures::Pictures()':<br />
@@ -60,35 +64,35 @@ E:\ап2.1\main.cpp: In constructor 'Pictures::Pictures()':<br />
 <font color="#0000ff">E:\ап2.1\main.cpp:20:8: warning: 'Pictures::category' should be initialized in the member initialization list [-Weffc++]</font><br />
 <font color="#0000ff">E:\ап2.1\main.cpp:20:8: warning: 'Pictures::visible' should be initialized in the member initialization list [-Weffc++]</font><br />
 E:\ап2.1\main.cpp: In function 'int main()':<br />
-E:\ап2.1\main.cpp:150:30: note: synthesized method 'Pictures::Pictures()' first required here <br />
+E:\ап2.1\main.cpp:194:30: note: synthesized method 'Pictures::Pictures()' first required here <br />
      Pictures menuPictures[100];<br />
                               ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:345:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:389:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
                  CentralPictures[select].w_scr = CentralPictures[select].w_scr * 1.02;<br />
                                                                                ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:346:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:390:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
                  CentralPictures[select].h_scr = CentralPictures[select].h_scr * 1.02;<br />
                                                                                ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:351:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:395:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
                  CentralPictures[select].w_scr = CentralPictures[select].w_scr * 0.98;<br />
                                                                                ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:352:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:396:79: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
                  CentralPictures[select].h_scr = CentralPictures[select].h_scr * 0.98;<br />
                                                                                ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:362:52: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:406:52: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
              CentralPictures[select].x = txMouseX() - CentralPictures[select].w/2;<br />
                                                     ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:363:52: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:407:52: warning: conversion to 'int' from 'double' may alter its value [-Wconversion]</font><br />
              CentralPictures[select].y = txMouseY() - CentralPictures[select].h/2;<br />
                                                     ^<br />
-<font color="#0000ff">E:\ап2.1\main.cpp:454:1: warning: stack usage might be 9040 bytes [-Wstack-usage=]</font><br />
+<font color="#0000ff">E:\ап2.1\main.cpp:498:1: warning: stack usage might be 9040 bytes [-Wstack-usage=]</font><br />
  }<br />
  ^<br />
 ------------------------------------------------------------------------------------------------------<br />
 Autosaving to the Git repository in E:/2.1/.git-auto/... <br />
 Output size is 2,29 MB<br />
 <font color="#0000ff">Process terminated with status 0 (0 minutes, 15 seconds)</font><br />
-<font color="#0000ff">0 errors, 27 warnings (0 minutes, 15 seconds)</font><br />
+<font color="#0000ff">0 errors, 28 warnings (0 minutes, 15 seconds)</font><br />
 </tt>
 </body>
 </html>

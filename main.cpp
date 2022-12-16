@@ -11,12 +11,12 @@ using namespace std;
 //Структура Кнопки
 struct Button
 {
+
     int x;
     int y;
     const char* text;
     string category;
 };
-
 struct Pictures
 {
     int x;
@@ -117,6 +117,50 @@ int readFromDir(string adress, Pictures menuPictures[], int COUNT_PICTURE)
      }
      return COUNT_PICTURE ;
 }
+
+string runFileDialog(bool isSave)
+{
+    string filename = "";
+    OPENFILENAME ofn;
+    TCHAR szFile[260] = {0};
+
+    ZeroMemory(&ofn, sizeof(ofn));
+    ofn.lStructSize = sizeof(ofn);
+    ofn.hwndOwner = txWindow();
+    ofn.lpstrFile = szFile;
+    ofn.nMaxFile = sizeof(szFile);
+    ofn.lpstrFilter = ("Text\0*.TXT\0");
+    ofn.nFilterIndex = 1;
+    ofn.lpstrFileTitle = NULL;
+    ofn.nMaxFileTitle = 0;
+    ofn.lpstrInitialDir = NULL;
+    ofn.Flags = OFN_PATHMUSTEXIST |OFN_FILEMUSTEXIST;
+
+    if (isSave)
+    {
+        if (GetSaveFileName(&ofn) == TRUE)
+        {
+            filename = ofn.lpstrFile;
+
+            if (filename.find(".txt") > 1000)
+            {
+                filename = filename + ".txt";
+            }
+        }
+    }
+ else
+ {
+    if (GetOpenFileName(&ofn) == TRUE)
+    {
+        filename = ofn.lpstrFile;
+    }
+ }
+    return filename;
+}
+
+
+
+
 
 const int COUNT_BTN = 7;
 const int BTN_SAVE = COUNT_BTN - 2;
@@ -373,7 +417,7 @@ while(!GetAsyncKeyState(VK_ESCAPE))
 
     if(Click(btn[BTN_SAVE]))
     {
-        string filename  = "2.txt"/*runFileDialog(true)    */;
+        string filename  = runFileDialog(true);
         if (filename != "")
             {
             ofstream fout;
@@ -399,7 +443,7 @@ while(!GetAsyncKeyState(VK_ESCAPE))
 
     if(Click(btn[BTN_LOAD]))
     {
-    string filename  = "2.txt"/*runFileDialog(true)    */;
+    string filename  = runFileDialog(true);
         if (filename != "")
         {
             for (int npic = 0; npic < COUNT_PICTURE; npic++)
