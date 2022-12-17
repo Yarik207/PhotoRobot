@@ -179,6 +179,8 @@ txTextCursor (false);
     int select = -1;
     bool mouse_free = false;
     char str[100];
+     string PAGE = "Menu";
+
 
     //Массив кнопок
     Button btn[COUNT_BTN];
@@ -298,6 +300,27 @@ while(!GetAsyncKeyState(VK_ESCAPE))
     txSetColor (TX_WHITE);
     txSetFillColor (TX_WHITE);
     txClear();
+     // начальнало стр
+if (PAGE == "Menu")
+{
+ txRectangle(0,0,1200,800);
+
+ txSetColor(TX_WHITE,5);
+ txSetFillColor(TX_BLACK);
+
+ txRectangle(410,35,545,90);
+ txSelectFont("Times", 30);
+ txDrawText(410,35,545,90,"Начать");
+
+ if(txMouseX() >= 410 && txMouseY() >= 35 &&
+    txMouseX() <= 545 && txMouseY() <= 90 &&
+    txMouseButtons() == 1)
+  {
+    PAGE = "Game";
+  }
+}
+  if(PAGE == "Game")
+{
 
     //Рисование кнопок
     for(int nk=0; nk<COUNT_BTN; nk++)
@@ -414,7 +437,7 @@ while(!GetAsyncKeyState(VK_ESCAPE))
                 }
             }
     }
-
+     //сохранение в тхт файл
     if(Click(btn[BTN_SAVE]))
     {
         string filename  = runFileDialog(true);
@@ -440,7 +463,7 @@ while(!GetAsyncKeyState(VK_ESCAPE))
     }
 
 
-
+     //загрузка из тхт файла
     if(Click(btn[BTN_LOAD]))
     {
     string filename  = runFileDialog(true);
@@ -476,7 +499,6 @@ while(!GetAsyncKeyState(VK_ESCAPE))
         }
     }
 
-
     txSleep(50);
     txEnd();
 }
@@ -493,6 +515,6 @@ while(!GetAsyncKeyState(VK_ESCAPE))
         txDeleteDC(CentralPictures[npic].image);
    }
 
-
+}
 return 0;
 }

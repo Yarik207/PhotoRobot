@@ -8161,3 +8161,79 @@ Run file:	E:\ап2.1\bin\Debug\PhotoRobot.exe
 Directory:	E:\ап2.1
 
 --------------------------------------------------
+
+--------------------------------------------------
+TXLib сообщает:
+
+Программа: G:\ап2.1\bin\Debug\PhotoRobot.exe, файл: c:\program files\codeblocks\mingw\include\txlib.h, строка: 10891, функция: bool {anonymous}::TX::_txBuffer_Delete(HDC__**),
+
+Сообщение: Параметр "*dc" неверен. Возможно, этот холст не создан, или уже уничтожен, или не загрузилась картинка.
+
+#1: TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400], Instance: 0x0050C2FC (32-bit), Flags: CMdRE0, Thread: 0x1B00 (Main), GetLastError(): 13 (Недопустимые данные). 
+
+--------------------------------------------------
+Стек вызовов:
+
+# 0 0x00410E8D in G:\ап2.1\bin\Debug\PhotoRobot.exe: _txBuffer_Delete() at c:/program files/codeblocks/mingw/include/txlib.h (10891)
+# 1 0x00422C39 in G:\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/program files/codeblocks/mingw/include/txlib.h (13634)
+# 2 0x00422EA9 in G:\ап2.1\bin\Debug\PhotoRobot.exe: txDeleteDC() at c:/program files/codeblocks/mingw/include/txlib.h (13656)
+
+# 3 0x0042FE37 in G:\ап2.1\bin\Debug\PhotoRobot.exe: main() at G:/ап2.1/main.cpp (509):
+
+    507:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    508:    {
+=>  509:         txDeleteDC(menuPictures[npic].image);
+    510:    }
+    511: 
+
+--------------------------------------------------
+Стек вызовов TX:
+
+# 0 in bool {anonymous}::TX::_txBuffer_Delete(HDC__**) at c:\program files\codeblocks\mingw\include\txlib.h (10891):
+
+  10889: $1  if (_TX_ARGUMENT_FAILED (dc)) return false;
+  10890: $   if (                   !*dc)  return false;
+=>10891: $   if (_TX_HDC_FAILED     (*dc)) return false;
+  10892: 
+  10893: $   if (!Win32::GetObjectType (Win32::GetCurrentObject (*dc, OBJ_BITMAP))) return false;
+
+# 1 in bool {anonymous}::TX::txDeleteDC(HDC__**) at c:\program files\codeblocks\mingw\include\txlib.h (13634):
+
+  13632: 
+  13633: $   HDC  dc = *pdc;
+=>13634: $   bool ok = _txBuffer_Delete (pdc);
+  13635: $   if (!ok) return false;
+  13636: 
+
+# 2 in bool {anonymous}::TX::txDeleteDC(HDC) at c:\program files\codeblocks\mingw\include\txlib.h (13656):
+
+  13654: bool txDeleteDC (HDC dc)
+  13655:     {
+=>13656: $1  return txDeleteDC (&dc);
+  13657:     }
+  13658: 
+
+# 3 in int main() at G:\ап2.1\main.cpp (509):
+
+    507:     for(int npic=0;npic <COUNT_PICTURE; npic++)
+    508:    {
+=>  509:         txDeleteDC(menuPictures[npic].image);
+    510:    }
+    511: 
+
+--------------------------------------------------
+Developed with:
+
+The Dumb Artist Library (TX Library)
+TXLib [Ver: 00173a, Rev: 171, Date: 2021-10-03 23:49:44 +0400]
+Copyright (C) Ded (Ilya Dedinsky, http://txlib.ru) <mail@txlib.ru>
+See license on: http://txlib.ru
+
+TXLib file:	c:\program files\codeblocks\mingw\include\txlib.h
+Compiled:	Dec 17 2022 13:15:12, GNU g++ 4.8.1, std=201103L, MinGW Runtime 3.20, 32-bit, DEBUG
+Started:	Dec 17 2022 13:15:30
+
+Run file:	G:\ап2.1\bin\Debug\PhotoRobot.exe
+Directory:	G:\ап2.1
+
+--------------------------------------------------
