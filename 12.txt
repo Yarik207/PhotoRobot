@@ -1,0 +1,15 @@
+600
+300
+Pictures/Лицо/face4M.bmp
+600
+275
+Pictures/Волосы/Hair1M.bmp
+700
+465
+Pictures/Глаза/eyes2M.bmp
+755
+500
+Pictures/Нос/nose4.bmp
+755
+600
+Pictures/Губы/lips5.bmp

@@ -3,35 +3,22 @@
 	<ActiveTarget name="Debug" />
 	<File name="main.cpp" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="-1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="315" topLine="7" />
+			<Cursor1 position="4242" topLine="48" />
 		</Cursor>
 		<Folding>
-			<Collapse line="69" />
-			<Collapse line="84" />
-			<Collapse line="227" />
-			<Collapse line="233" />
-			<Collapse line="239" />
-			<Collapse line="245" />
-			<Collapse line="262" />
-			<Collapse line="268" />
-			<Collapse line="274" />
-			<Collapse line="280" />
-			<Collapse line="315" />
-			<Collapse line="321" />
-			<Collapse line="328" />
-			<Collapse line="330" />
-			<Collapse line="332" />
-			<Collapse line="402" />
-			<Collapse line="404" />
-			<Collapse line="409" />
-			<Collapse line="411" />
-			<Collapse line="447" />
-			<Collapse line="449" />
-			<Collapse line="456" />
-			<Collapse line="465" />
-			<Collapse line="467" />
-			<Collapse line="485" />
-			<Collapse line="491" />
+			<Collapse line="12" />
+			<Collapse line="19" />
+			<Collapse line="51" />
+			<Collapse line="62" />
+			<Collapse line="68" />
+			<Collapse line="83" />
+			<Collapse line="98" />
+			<Collapse line="120" />
+			<Collapse line="138" />
+			<Collapse line="140" />
+			<Collapse line="144" />
+			<Collapse line="150" />
+			<Collapse line="152" />
 		</Folding>
 	</File>
 </CodeBlocks_layout_file>
