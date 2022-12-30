@@ -8,7 +8,6 @@
 
 using namespace std;
 
-//Структура Кнопки
 struct Button
 {
     int x;
@@ -29,8 +28,6 @@ struct Pictures
     string category;
     bool visible;
 };
-
-//Функция рисования кнопки
 void  drawButton(Button btn)
 {
 
@@ -47,7 +44,6 @@ void  drawButton(Button btn)
       txSelectFont("Times New Roman", 32);
       txDrawText(btn.x , btn.y,btn.x+150 ,btn.y+40, btn.text);
 }
-
 bool Click(Button btn)
 {
 return(txMouseX() >= btn.x &&
@@ -56,7 +52,6 @@ return(txMouseX() >= btn.x &&
        txMouseY() <= btn.y + 40 &&
        txMouseButtons() == 1 );
 }
-
 void drawPicture(Pictures pct)
 {
     if(pct.visible)
@@ -79,7 +74,6 @@ int get_w(string adress)
   return w;
 
 }
-
 int get_h(string adress)
 {
 
@@ -94,7 +88,6 @@ int get_h(string adress)
   return h;
 
 }
-
 int readFromDir(string adress, Pictures menuPictures[], int COUNT_PICTURE)
 {
     DIR  * dir;
@@ -156,14 +149,13 @@ string runFileDialog(bool isSave)
  }
     return filename;
 }
-const int COUNT_BTN = 11;
+const int COUNT_BTN = 8;
 const int BTN_SAVE = COUNT_BTN - 2;
 const int BTN_LOAD = COUNT_BTN - 1;
 
 int main()
 {
 txCreateWindow (1200, 800);
-txRectangle(500,100,700,200);
 
 txDisableAutoPause();
 
@@ -173,9 +165,7 @@ txTextCursor (false);
     int select = -1;
     bool mouse_free = false;
     char str[100];
-    string PAGE = "Menu";
 
-    //Массив кнопок
     Button btn[COUNT_BTN];
     btn[0] = {0, 50,"Овал лица", "Лицо"};
     btn[1] = {150, 50,"Стрижка", "Волосы"};
@@ -186,10 +176,7 @@ txTextCursor (false);
     btn[6] = {1000, 50, "Сохранить" , ""};
     btn[7] = {1000, 100, "Загрузить" , ""};
 
-    //Массив иконок-меню левых
-    Pictures menuPictures[100];
-
-    //Массив иконок центральных
+    Pictures menuPictures[100];                                                 7
     Pictures CentralPictures[100];
 
     COUNT_PICTURE = readFromDir("Pictures/Лицо/",  menuPictures, COUNT_PICTURE) ;
@@ -199,11 +186,11 @@ txTextCursor (false);
     COUNT_PICTURE = readFromDir("Pictures/Губы/",  menuPictures, COUNT_PICTURE) ;
     COUNT_PICTURE = readFromDir("Pictures/Усы/",  menuPictures, COUNT_PICTURE) ;
 
-
     for(int npic = 0; npic < COUNT_PICTURE; npic++)
     {
         menuPictures[npic].x = 50;
         menuPictures[npic].image = txLoadImage(menuPictures[npic].adress.c_str());
+
 
         menuPictures[npic].w = get_w(menuPictures[npic].adress);
 
@@ -243,6 +230,12 @@ txTextCursor (false);
             menuPictures[npic].h_scr = 50;
         }
 
+       if(menuPictures[npic].category == "Усы")
+        {
+             menuPictures[npic].w_scr = 50;
+            menuPictures[npic].h_scr = 25;
+        }
+
         menuPictures[npic].visible = false;
 
         CentralPictures[npic].adress = menuPictures[npic].adress;
@@ -255,147 +248,64 @@ txTextCursor (false);
         CentralPictures[npic].category = menuPictures[npic].category;
 
         if(CentralPictures[npic].category == "Лицо")
-            {
-                CentralPictures[npic].x = 600;
-                CentralPictures[npic].y = 300;
-            }
+        {
+            CentralPictures[npic].x = 600;
+            CentralPictures[npic].y = 300;
+        }
 
         if(CentralPictures[npic].category == "Нос")
-            {
-                CentralPictures[npic].x = 755;
-                CentralPictures[npic].y = 500;
-            }
+        {
+            CentralPictures[npic].x = 760;
+            CentralPictures[npic].y = 500;
+        }
 
         if(CentralPictures[npic].category == "Губы")
-            {
-                CentralPictures[npic].x = 755;
-                CentralPictures[npic].y = 600;
-            }
+        {
+            CentralPictures[npic].x = 750;
+            CentralPictures[npic].y = 610;
+        }
 
         if(CentralPictures[npic].category == "Глаза")
-            {
-                CentralPictures[npic].x = 700;
-                CentralPictures[npic].y = 465;
-            }
+        {
+            CentralPictures[npic].x = 700;
+            CentralPictures[npic].y = 465;
+        }
 
         if(CentralPictures[npic].category == "Волосы")
-            {
-                CentralPictures[npic].x = 600;
-                CentralPictures[npic].y = 275;
-               // CentralPictures[npic].w_scr = 755;
-               // CentralPictures[npic].h_scr = 500;
-            }
+         {
+            CentralPictures[npic].x = 600;
+            CentralPictures[npic].y = 275;
+        }
+
+        if(CentralPictures[npic].category == "Усы")
+        {
+            CentralPictures[npic].x = 685;
+            CentralPictures[npic].y = 585;
+        }
     }
 
-while(true)
+while(!GetAsyncKeyState(VK_ESCAPE))
     {
-        txBegin();
-        txSetColor (TX_WHITE);
-        txSetFillColor (TX_WHITE);
-        txClear();
-        if(PAGE == "Menu")
-        {
-            txSetColor(TX_WTX_WHITEHITE,5);TX_BLACK
-            txSetFillColor(TX_BLACK);
+     txBegin();
+    txSetColor (TX_WHITE);
+    txSetFillColor (TX_WHITE);
+    txClear();
 
-            txRectangle(500,100,700,200);
-            txSelectFont("Times", 30);
-            txDrawText(500,100,700,200,"Начать");
-
-            if(txMouseX() >= 500 && txMouseY() >= 100 &&
-            txMouseX() <= 700 && txMouseY() <= 200 &&
-            txMouseButtons() == 1)
-                {
-                    PAGE = "Game";
-                }
-
-            txRectangle(500,350,700,450);
-            txSelectFont("Times", 30);
-            txDrawText(500,350,700,450,"Справка");
-
-           if(txMouseX() >= 500 && txMouseY() >= 350 &&
-            txMouseX() <= 700 && txMouseY() <= 450 &&
-            txMouseButtons() == 1)
-                {
-                    PAGE = "Info";
-                }
-
-            txRectangle(500,600,700,700);
-            txSelectFont("Times", 30);
-            txDrawText(500,600,700,700,"Выйти");
-
-            if(txMouseX() >= 500 && txMouseY() >= 600 &&
-            txMouseX() <= 700 && txMouseY() <= 700 &&
-            txMouseButtons() == 1)
-                {
-                    return 0;
-                }
-        }
-
-        if(PAGE == "Info")
-        {
-        //txSetColor(TX_WHITE);
-        txSelectFont("Times", 35);
-        txDrawText(0,0,1200,800,
-                      "Название\n"
-                      "\n"
-                      "Храм испытаний\n"
-                      "\n"
-                       "Об игре\n"
-                      "\n"
-                      "Лабиринт,главная цель выбраться,(желательно живым)\n"
-                      "\n"
-                      "Управление\n"
-                      "\n"
-                      "влево (A) вправо (D) вперед (W) назад (S)\n"
-                      "\n"
-                      "Пауза\n"
-                      "\n"
-                      "Esc\n"
-                      "\n"
-                      "Об авторах\n"
-                      "\n"
-                      "Ingenerka Game Studio\n");
-
-        txSetColor(TX_WHITE);
-        txRectangle(500,600,700,700);
-        txSelectFont("Times", 30);
-        txDrawText(500,600,700,700,"Назад");
-
-        if(txMouseX() >= 500 && txMouseY() >= 600 &&
-        txMouseX() <= 700 && txMouseY() <= 700 &&
-        txMouseButtons() == 1)
-            {
-                PAGE = "Menu";
-            }
-        }
-
-if(PAGE == "Game")
-{
-  if(GetAsyncKeyState(VK_ESCAPE))
-   {
-    PAGE = "Menu";
-   }
-
-        //Рисование кнопок
         for(int nk=0; nk<COUNT_BTN; nk++)
         {
             drawButton(btn[nk]);
         }
 
-        //Левых картинок рисование
         for(int npic = 0; npic < COUNT_PICTURE; npic++)
         {
             drawPicture(menuPictures[npic]);
         }
 
-        //Центральных картинок рисование
         for(int npic = 0; npic < COUNT_PICTURE; npic++)
         {
             drawPicture(CentralPictures[npic]);
         }
 
-        //Центральных картинок рисование
         for(int npic = 0; npic < COUNT_PICTURE; npic++)
         {
             if(txMouseX() >= menuPictures[npic].x &&
@@ -417,7 +327,6 @@ if(PAGE == "Game")
             }
         }
 
-       //Видимость левых по категориям кнопок
         for(int nk=0; nk<COUNT_BTN; nk++)
         {
             if (Click(btn[nk]))
@@ -434,7 +343,6 @@ if(PAGE == "Game")
             }
         }
 
-         //выбор центральной картинки
           for(int npic = 0; npic < COUNT_PICTURE; npic++)
         {
             if(txMouseX() >= CentralPictures[npic].x &&
@@ -452,9 +360,7 @@ if(PAGE == "Game")
         }
 
         sprintf(str, "count= %d; vybor= %d ", COUNT_PICTURE, select);
-        //txTextOut(0,0,str);
 
-        //Передвижение центральной картинки выбранной клавишами
         if(select >= 0)
         {
             if(GetAsyncKeyState(VK_RIGHT)) CentralPictures[select].x += 3;
@@ -476,7 +382,6 @@ if(PAGE == "Game")
 
         }
 
-            //Передвижение центральной картинки выбранной  мыщкой
         if(select >= 0)
         {
             if(txMouseButtons() == 1 && !mouse_free)
@@ -492,7 +397,7 @@ if(PAGE == "Game")
                     }
                 }
         }
-         //сохранение в тхт файл
+
         if(Click(btn[BTN_SAVE]))
         {
             string filename  = runFileDialog(true);
@@ -517,8 +422,6 @@ if(PAGE == "Game")
             }
         }
 
-
-         //загрузка из тхт файла
         if(Click(btn[BTN_LOAD]))
         {
         string filename  = runFileDialog(true);
@@ -556,19 +459,16 @@ if(PAGE == "Game")
 
         txSleep(50);
         txEnd();
-}
 
-        //Удаление левых
+        }
         for(int npic=0;npic > COUNT_PICTURE; npic++)
        {
             txDeleteDC(menuPictures[npic].image);
        }
 
-        //Удаление центральных
         for(int npic=0;npic > COUNT_PICTURE; npic++)
        {
             txDeleteDC(CentralPictures[npic].image);
        }
-     }
 return 0;
 }
